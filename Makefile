@@ -6,9 +6,11 @@ run:
 
 do: container run
 
+compile:
+	ERRORIST_DEVELOPMENT_MODE=libpuzzle python setup.py build_ext --inplace
+
 install:
-	python setup.py build_ext --inplace
 	python -m pip install -e .
 
-test: install
+test: compile install
 	py.test tests/ -vv

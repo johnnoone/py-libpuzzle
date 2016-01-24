@@ -54,6 +54,8 @@ cdef extern from "puzzle.h":
     int puzzle_uncompress_cvec(PuzzleContext * const context, const PuzzleCompressedCvec * const compressed_cvec, PuzzleCvec * const cvec)
     double puzzle_vector_normalized_distance(PuzzleContext * const context, const PuzzleCvec * const cvec1, const PuzzleCvec * const cvec2, const int fix_for_texts)
 
+__version__ = '0.0.1'
+
 SIMILARITY_THRESHOLD = PUZZLE_CVEC_SIMILARITY_THRESHOLD
 SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD
 SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD
