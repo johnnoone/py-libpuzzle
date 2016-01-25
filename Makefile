@@ -14,3 +14,5 @@ install:
 
 test: compile install
 	py.test tests/ -vv
+
+.PHONY: container run do compile install test
