@@ -1,0 +1,60 @@
+---
+
+stages:
+  - build
+  - test
+  - release
+
+Test:
+  stage: build
+  script:
+    - python -m pip install cython
+    - ERRORIST_DEVELOPMENT_MODE=libpuzzle python setup.py build_ext --inplace
+    - python -m pip install -e .
+    - python -m pip install -r requirements-test.txt
+    - py.test tests/ --cov pyrepo --cov-report term-missing --flake8
+  tags:
+    - python3.5
+
+Test:
+  stage: test
+  script:
+    - python -m pip install -e .
+    - python -m pip install -r requirements-test.txt
+    - py.test tests/ --cov pyrepo --cov-report term-missing --flake8
+  tags:
+    - python3.5
+
+Prepare docker container:
+  stage: release
+  script:
+    - docker build -t errorist/pyrepo:latest .
+    - docker tag -f errorist/pyrepo:latest hub.errorist.xyz/pyrepo:latest
+    - docker push hub.errorist.xyz/pyrepo:latest
+  only:
+    - master
+  tags:
+    - docker-build
+
+Release to pypi:
+  stage: release
+  script:
+    - python -m pip install cython
+    - ERRORIST_DEVELOPMENT_MODE=libpuzzle python setup.py build_ext --inplace
+    - python setup.py sdist bdist_wheel
+    - twine upload -u $PYPI_USER -p $PYPI_PASSWORD dist/*
+  tags:
+    - python3.5
+  only:
+    - /^v[\d\.]+.*$/
+  allow_failure: true
+
+# Upload documentation:
+#   stage: release
+#   script:
+#     - curl -X POST http://readthedocs.org/build/py-repo
+#   tags:
+#     - python3.5
+#   only:
+#     - master
+#   allow_failure: true

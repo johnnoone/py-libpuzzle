@@ -14,6 +14,8 @@ setup(
     name='libpuzzle',
     version=versioneer.get_version(),
     description='Quickly find visually similar images',
+    author='Xavier Barbosa',
+    author_email='clint.northwood@gmail.com',
     ext_modules=extensions,
     install_requires=[
         'six'
