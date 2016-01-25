@@ -1,5 +1,5 @@
 # distutils: libraries = puzzle gd
-# dist---utils: include_dirs = /usr/include
+# distutils: include_dirs = /usr/include
 
 cdef extern from "puzzle.h":
 
@@ -53,8 +53,6 @@ cdef extern from "puzzle.h":
     int puzzle_compress_cvec(PuzzleContext * const context, PuzzleCompressedCvec * const compressed_cvec, const PuzzleCvec * const cvec)
     int puzzle_uncompress_cvec(PuzzleContext * const context, const PuzzleCompressedCvec * const compressed_cvec, PuzzleCvec * const cvec)
     double puzzle_vector_normalized_distance(PuzzleContext * const context, const PuzzleCvec * const cvec1, const PuzzleCvec * const cvec2, const int fix_for_texts)
-
-__version__ = '0.0.1'
 
 SIMILARITY_THRESHOLD = PUZZLE_CVEC_SIMILARITY_THRESHOLD
 SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD
@@ -156,9 +154,8 @@ cdef class Puzzle:
             if response:
                 raise AttributeError('unable to set p_ratio')
 
-    def fill_cvec_from_file(self, filename):
+    cpdef fill_cvec_from_file(self, char* filename):
         cdef PuzzleCvec cvec
-        filename = filename.encode('utf8')
 
         puzzle_init_cvec(&self.context, &cvec)
         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
@@ -168,11 +165,11 @@ cdef class Puzzle:
         cdef Py_ssize_t length = 0
         length = cvec.sizeof_vec
 
-        response = Signature(cvec.vec[:length])
+        response = cvec.vec[:length]
         puzzle_free_cvec(&self.context, &cvec);
         return response
 
-    def compress_cvec(self, sign):
+    cpdef compress_cvec(self, sign):
         cdef PuzzleCompressedCvec compressed_cvec
         cdef PuzzleCvec cvec
 
@@ -191,14 +188,14 @@ cdef class Puzzle:
         cdef Py_ssize_t length = 0
         length = compressed_cvec.sizeof_compressed_vec
 
-        response = CompressedSignature(compressed_cvec.vec[:length])
+        response =compressed_cvec.vec[:length]
 
         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
         cvec.vec = NULL
         puzzle_free_cvec(&self.context, &cvec)
         return response
 
-    def uncompress_cvec(self, sign):
+    cpdef uncompress_cvec(self, sign):
         cdef PuzzleCompressedCvec compressed_cvec
         cdef PuzzleCvec cvec
 
@@ -217,14 +214,14 @@ cdef class Puzzle:
         cdef Py_ssize_t length = 0
         length = cvec.sizeof_vec
 
-        response = Signature(cvec.vec[:length])
+        response = cvec.vec[:length]
         puzzle_free_cvec(&self.context, &cvec)
         compressed_cvec.vec = NULL
         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
         return response
 
-    def vector_normalized_distance(self, sign1, sign2):
-        """Computes the distance between two signatures.
+    cpdef vector_normalized_distance(self, sign1, sign2):
+        """Computes the distance between two vectors.
 
         Result is between 0.0 and 1.0
         """
@@ -240,17 +237,12 @@ cdef class Puzzle:
         cvec2.vec = sign2
         cvec2.sizeof_vec = <size_t>len(sign2)
 
-        distance = puzzle_vector_normalized_distance(&self.context, &cvec1, &cvec2, 0)
+        distance = puzzle_vector_normalized_distance(&self.context,
+                                                     &cvec1,
+                                                     &cvec2,
+                                                     0)
         cvec1.vec = NULL
         cvec2.vec = NULL
         puzzle_free_cvec(&self.context, &cvec1);
         puzzle_free_cvec(&self.context, &cvec2);
         return distance
-
-
-class Signature(bytes):
-    pass
-
-
-class CompressedSignature(bytes):
-    pass

@@ -28,9 +28,9 @@ Usage::
     from libpuzzle import Puzzle, SIMILARITY_THRESHOLD
 
     puzzle = Puzzle()
-    sign1 = puzzle.fill_cvec_from_file('img1.jpg')
-    sign2 = puzzle.fill_cvec_from_file('img2.png')
-    distance = puzzle.vector_normalized_distance(sign1, sign2)
+    sign1 = puzzle.from_filename('img1.jpg')
+    sign2 = puzzle.from_filename('img2.png')
+    distance = sign1.distance(sign2)
     if distance <= SIMILARITY_THRESHOLD:
         print('images are propably the same')
 
@@ -59,11 +59,11 @@ API:
 
     .. py:attribute:: autocrop
 
-    .. py:method:: fill_cvec_from_file(filename) -> Signature
+    .. py:method:: from_filename(filename) -> Signature
 
-    .. py:method:: compress_cvec(sign) -> CompressedSignature
+    .. py:method:: from_signature(sign) -> CompressedSignature
 
-    .. py:method:: uncompress_cvec(sign) -> Signature
+    .. py:method:: from_signature(sign) -> Signature
 
     .. py:method:: vector_normalized_distance(sign1, sign2) -> bool
 

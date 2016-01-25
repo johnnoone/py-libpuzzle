@@ -3,7 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "depends": [],
+        "depends": [
+            "/usr/include/puzzle.h"
+        ],
+        "include_dirs": [
+            "/usr/include"
+        ],
         "libraries": [
             "puzzle",
             "gd"
@@ -246,8 +251,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__libpuzzle
-#define __PYX_HAVE_API__libpuzzle
+#define __PYX_HAVE___libpuzzle
+#define __PYX_HAVE_API___libpuzzle
 #include "puzzle.h"
 #ifdef _OPENMP
 #include <omp.h>
@@ -457,24 +462,34 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "libpuzzle.pyx",
+  "_libpuzzle.pyx",
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_9libpuzzle_Puzzle;
+struct __pyx_obj_10_libpuzzle_Puzzle;
 
-/* "libpuzzle.pyx":69
+/* "_libpuzzle.pyx":67
  * 
  * 
  * cdef class Puzzle:             # <<<<<<<<<<<<<<
  * 
  *     cdef PuzzleContext context
  */
-struct __pyx_obj_9libpuzzle_Puzzle {
+struct __pyx_obj_10_libpuzzle_Puzzle {
   PyObject_HEAD
+  struct __pyx_vtabstruct_10_libpuzzle_Puzzle *__pyx_vtab;
   PuzzleContext context;
 };
 
+
+
+struct __pyx_vtabstruct_10_libpuzzle_Puzzle {
+  PyObject *(*fill_cvec_from_file)(struct __pyx_obj_10_libpuzzle_Puzzle *, char *, int __pyx_skip_dispatch);
+  PyObject *(*compress_cvec)(struct __pyx_obj_10_libpuzzle_Puzzle *, PyObject *, int __pyx_skip_dispatch);
+  PyObject *(*uncompress_cvec)(struct __pyx_obj_10_libpuzzle_Puzzle *, PyObject *, int __pyx_skip_dispatch);
+  PyObject *(*vector_normalized_distance)(struct __pyx_obj_10_libpuzzle_Puzzle *, PyObject *, PyObject *, int __pyx_skip_dispatch);
+};
+static struct __pyx_vtabstruct_10_libpuzzle_Puzzle *__pyx_vtabptr_10_libpuzzle_Puzzle;
 
 /* --- Runtime support code (head) --- */
 #ifndef CYTHON_REFNANNY
@@ -572,19 +587,21 @@ static CYTHON_INLINE void __Pyx_ErrFetch(PyObject **type, PyObject **value, PyOb
 
 static void __Pyx_Raise(PyObject *type, PyObject *value, PyObject *tb, PyObject *cause);
 
-static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name);
-
 #if CYTHON_COMPILING_IN_CPYTHON
 static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject *arg);
 #endif
 
 static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg);
 
+static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name);
+
 static void __Pyx_RaiseDoubleKeywordsError(const char* func_name, PyObject* kw_name);
 
 static int __Pyx_ParseOptionalKeywords(PyObject *kwds, PyObject **argnames[],\
     PyObject *kwds2, PyObject *values[], Py_ssize_t num_pos_args,\
     const char* function_name);
+
+static int __Pyx_SetVtable(PyObject *dict, void *vtable);
 
 static PyObject *__Pyx_CalculateMetaclass(PyTypeObject *metaclass, PyObject *bases);
 
@@ -624,35 +641,37 @@ static int __Pyx_check_binary_version(void);
 
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
+static PyObject *__pyx_f_10_libpuzzle_6Puzzle_fill_cvec_from_file(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, char *__pyx_v_filename, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10_libpuzzle_6Puzzle_compress_cvec(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10_libpuzzle_6Puzzle_uncompress_cvec(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_10_libpuzzle_6Puzzle_vector_normalized_distance(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign1, PyObject *__pyx_v_sign2, int __pyx_skip_dispatch); /* proto*/
 
-/* Module declarations from 'libpuzzle' */
-static PyTypeObject *__pyx_ptype_9libpuzzle_Puzzle = 0;
-#define __Pyx_MODULE_NAME "libpuzzle"
-int __pyx_module_is_main_libpuzzle = 0;
+/* Module declarations from '_libpuzzle' */
+static PyTypeObject *__pyx_ptype_10_libpuzzle_Puzzle = 0;
+#define __Pyx_MODULE_NAME "_libpuzzle"
+int __pyx_module_is_main__libpuzzle = 0;
 
-/* Implementation of 'libpuzzle' */
+/* Implementation of '_libpuzzle' */
 static PyObject *__pyx_builtin_RuntimeError;
 static PyObject *__pyx_builtin_AttributeError;
 static char __pyx_k_doc[] = "__doc__";
 static char __pyx_k_main[] = "__main__";
 static char __pyx_k_test[] = "__test__";
-static char __pyx_k_utf8[] = "utf8";
-static char __pyx_k_0_0_1[] = "0.0.1";
 static char __pyx_k_sign1[] = "sign1";
 static char __pyx_k_sign2[] = "sign2";
-static char __pyx_k_encode[] = "encode";
 static char __pyx_k_lalala[] = "lalala";
 static char __pyx_k_module[] = "__module__";
 static char __pyx_k_prepare[] = "__prepare__";
-static char __pyx_k_version[] = "__version__";
 static char __pyx_k_qualname[] = "__qualname__";
-static char __pyx_k_Signature[] = "Signature";
-static char __pyx_k_libpuzzle[] = "libpuzzle";
+static char __pyx_k_libpuzzle[] = "_libpuzzle";
 static char __pyx_k_metaclass[] = "__metaclass__";
+static char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
 static char __pyx_k_PuzzleError[] = "PuzzleError";
 static char __pyx_k_RuntimeError[] = "RuntimeError";
+static char __pyx_k_compress_cvec[] = "compress_cvec";
 static char __pyx_k_AttributeError[] = "AttributeError";
-static char __pyx_k_CompressedSignature[] = "CompressedSignature";
+static char __pyx_k_uncompress_cvec[] = "uncompress_cvec";
+static char __pyx_k_fill_cvec_from_file[] = "fill_cvec_from_file";
 static char __pyx_k_SIMILARITY_THRESHOLD[] = "SIMILARITY_THRESHOLD";
 static char __pyx_k_unable_to_set_lambdas[] = "unable to set lambdas";
 static char __pyx_k_unable_to_set_p_ratio[] = "unable to set p_ratio";
@@ -662,24 +681,24 @@ static char __pyx_k_unable_to_set_max_height[] = "unable to set max height";
 static char __pyx_k_SIMILARITY_HIGH_THRESHOLD[] = "SIMILARITY_HIGH_THRESHOLD";
 static char __pyx_k_SIMILARITY_LOWER_THRESHOLD[] = "SIMILARITY_LOWER_THRESHOLD";
 static char __pyx_k_unable_to_set_noise_cutoff[] = "unable to set noise cutoff";
-static PyObject *__pyx_kp_s_0_0_1;
+static char __pyx_k_vector_normalized_distance[] = "vector_normalized_distance";
 static PyObject *__pyx_n_s_AttributeError;
-static PyObject *__pyx_n_s_CompressedSignature;
 static PyObject *__pyx_n_s_PuzzleError;
 static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_n_s_SIMILARITY_HIGH_THRESHOLD;
 static PyObject *__pyx_n_s_SIMILARITY_LOWER_THRESHOLD;
 static PyObject *__pyx_n_s_SIMILARITY_LOW_THRESHOLD;
 static PyObject *__pyx_n_s_SIMILARITY_THRESHOLD;
-static PyObject *__pyx_n_s_Signature;
+static PyObject *__pyx_n_s_compress_cvec;
 static PyObject *__pyx_n_s_doc;
-static PyObject *__pyx_n_s_encode;
+static PyObject *__pyx_n_s_fill_cvec_from_file;
 static PyObject *__pyx_n_s_lalala;
 static PyObject *__pyx_n_s_libpuzzle;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_metaclass;
 static PyObject *__pyx_n_s_module;
 static PyObject *__pyx_n_s_prepare;
+static PyObject *__pyx_n_s_pyx_vtable;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_sign1;
 static PyObject *__pyx_n_s_sign2;
@@ -689,31 +708,31 @@ static PyObject *__pyx_kp_s_unable_to_set_max_height;
 static PyObject *__pyx_kp_s_unable_to_set_max_width;
 static PyObject *__pyx_kp_s_unable_to_set_noise_cutoff;
 static PyObject *__pyx_kp_s_unable_to_set_p_ratio;
-static PyObject *__pyx_n_s_utf8;
-static PyObject *__pyx_n_s_version;
-static int __pyx_pf_9libpuzzle_6Puzzle___cinit__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static void __pyx_pf_9libpuzzle_6Puzzle_2__dealloc__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static int __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10max_height___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static int __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static int __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static int __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static int __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static int __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static int __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self); /* proto */
-static int __pyx_pf_9libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, int __pyx_v_value); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_filename); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign); /* proto */
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10vector_normalized_distance(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign1, PyObject *__pyx_v_sign2); /* proto */
-static PyObject *__pyx_tp_new_9libpuzzle_Puzzle(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_n_s_uncompress_cvec;
+static PyObject *__pyx_n_s_vector_normalized_distance;
+static int __pyx_pf_10_libpuzzle_6Puzzle___cinit__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static void __pyx_pf_10_libpuzzle_6Puzzle_2__dealloc__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static int __pyx_pf_10_libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_10max_height___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static int __pyx_pf_10_libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static int __pyx_pf_10_libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static int __pyx_pf_10_libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static int __pyx_pf_10_libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static int __pyx_pf_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static int __pyx_pf_10_libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self); /* proto */
+static int __pyx_pf_10_libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, int __pyx_v_value); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, char *__pyx_v_filename); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign); /* proto */
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_10vector_normalized_distance(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign1, PyObject *__pyx_v_sign2); /* proto */
+static PyObject *__pyx_tp_new_10_libpuzzle_Puzzle(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_tuple__3;
@@ -725,9 +744,8 @@ static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_tuple__9;
 static PyObject *__pyx_tuple__10;
 static PyObject *__pyx_tuple__11;
-static PyObject *__pyx_tuple__12;
 
-/* "libpuzzle.pyx":73
+/* "_libpuzzle.pyx":71
  *     cdef PuzzleContext context
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -736,27 +754,27 @@ static PyObject *__pyx_tuple__12;
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__ (wrapper)", 0);
   if (unlikely(PyTuple_GET_SIZE(__pyx_args) > 0)) {
     __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 0, 0, PyTuple_GET_SIZE(__pyx_args)); return -1;}
   if (unlikely(__pyx_kwds) && unlikely(PyDict_Size(__pyx_kwds) > 0) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__cinit__", 0))) return -1;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle___cinit__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle___cinit__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle___cinit__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static int __pyx_pf_10_libpuzzle_6Puzzle___cinit__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "libpuzzle.pyx":74
+  /* "_libpuzzle.pyx":72
  * 
  *     def __cinit__(self):
  *         puzzle_init_context(&self.context)             # <<<<<<<<<<<<<<
@@ -765,7 +783,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle___cinit__(struct __pyx_obj_9libpuzzle_Puz
  */
   puzzle_init_context((&__pyx_v_self->context));
 
-  /* "libpuzzle.pyx":73
+  /* "_libpuzzle.pyx":71
  *     cdef PuzzleContext context
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -779,7 +797,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle___cinit__(struct __pyx_obj_9libpuzzle_Puz
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":76
+/* "_libpuzzle.pyx":74
  *         puzzle_init_context(&self.context)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -788,21 +806,21 @@ static int __pyx_pf_9libpuzzle_6Puzzle___cinit__(struct __pyx_obj_9libpuzzle_Puz
  */
 
 /* Python wrapper */
-static void __pyx_pw_9libpuzzle_6Puzzle_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_9libpuzzle_6Puzzle_3__dealloc__(PyObject *__pyx_v_self) {
+static void __pyx_pw_10_libpuzzle_6Puzzle_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
+static void __pyx_pw_10_libpuzzle_6Puzzle_3__dealloc__(PyObject *__pyx_v_self) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__ (wrapper)", 0);
-  __pyx_pf_9libpuzzle_6Puzzle_2__dealloc__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_pf_10_libpuzzle_6Puzzle_2__dealloc__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
 }
 
-static void __pyx_pf_9libpuzzle_6Puzzle_2__dealloc__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static void __pyx_pf_10_libpuzzle_6Puzzle_2__dealloc__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "libpuzzle.pyx":77
+  /* "_libpuzzle.pyx":75
  * 
  *     def __dealloc__(self):
  *         puzzle_free_context(&self.context)             # <<<<<<<<<<<<<<
@@ -811,7 +829,7 @@ static void __pyx_pf_9libpuzzle_6Puzzle_2__dealloc__(struct __pyx_obj_9libpuzzle
  */
   puzzle_free_context((&__pyx_v_self->context));
 
-  /* "libpuzzle.pyx":76
+  /* "_libpuzzle.pyx":74
  *         puzzle_init_context(&self.context)
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -823,7 +841,7 @@ static void __pyx_pf_9libpuzzle_6Puzzle_2__dealloc__(struct __pyx_obj_9libpuzzle
   __Pyx_RefNannyFinishContext();
 }
 
-/* "libpuzzle.pyx":81
+/* "_libpuzzle.pyx":79
  *     property max_width:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -832,19 +850,19 @@ static void __pyx_pf_9libpuzzle_6Puzzle_2__dealloc__(struct __pyx_obj_9libpuzzle
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_9max_width_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_9max_width_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_9max_width_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_9max_width_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_9max_width___get__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_9max_width___get__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -853,7 +871,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "libpuzzle.pyx":82
+  /* "_libpuzzle.pyx":80
  * 
  *         def __get__(self):
  *             return self.context.puzzle_max_width             # <<<<<<<<<<<<<<
@@ -861,13 +879,13 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj
  *         def __set__(self, unsigned int value):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_self->context.puzzle_max_width); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_self->context.puzzle_max_width); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":81
+  /* "_libpuzzle.pyx":79
  *     property max_width:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -878,7 +896,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_width.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_width.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -886,7 +904,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":84
+/* "_libpuzzle.pyx":82
  *             return self.context.puzzle_max_width
  * 
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
@@ -895,8 +913,8 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_9max_width___get__(struct __pyx_obj
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_9max_width_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_9max_width_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_9max_width_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_9max_width_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
   unsigned int __pyx_v_value;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -905,22 +923,22 @@ static int __pyx_pw_9libpuzzle_6Puzzle_9max_width_3__set__(PyObject *__pyx_v_sel
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_value); {
-    __pyx_v_value = __Pyx_PyInt_As_unsigned_int(__pyx_arg_value); if (unlikely((__pyx_v_value == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_value = __Pyx_PyInt_As_unsigned_int(__pyx_arg_value); if (unlikely((__pyx_v_value == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_width.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_width.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((unsigned int)__pyx_v_value));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_9max_width_2__set__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((unsigned int)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value) {
+static int __pyx_pf_10_libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value) {
   int __pyx_v_response;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -931,7 +949,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_9lib
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "libpuzzle.pyx":85
+  /* "_libpuzzle.pyx":83
  * 
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_max_width(&self.context, value)             # <<<<<<<<<<<<<<
@@ -940,7 +958,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_9lib
  */
   __pyx_v_response = puzzle_set_max_width((&__pyx_v_self->context), __pyx_v_value);
 
-  /* "libpuzzle.pyx":86
+  /* "_libpuzzle.pyx":84
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -950,20 +968,20 @@ static int __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_9lib
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
 
-    /* "libpuzzle.pyx":87
+    /* "_libpuzzle.pyx":85
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set max width')             # <<<<<<<<<<<<<<
  * 
  *     property max_height:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":86
+    /* "_libpuzzle.pyx":84
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -972,7 +990,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_9lib
  */
   }
 
-  /* "libpuzzle.pyx":84
+  /* "_libpuzzle.pyx":82
  *             return self.context.puzzle_max_width
  * 
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
@@ -985,14 +1003,14 @@ static int __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_9lib
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_width.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_width.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":91
+/* "_libpuzzle.pyx":89
  *     property max_height:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1001,19 +1019,19 @@ static int __pyx_pf_9libpuzzle_6Puzzle_9max_width_2__set__(struct __pyx_obj_9lib
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_10max_height_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_10max_height_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_10max_height_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_10max_height_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_10max_height___get__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_10max_height___get__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10max_height___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_10max_height___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1022,7 +1040,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10max_height___get__(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "libpuzzle.pyx":92
+  /* "_libpuzzle.pyx":90
  * 
  *         def __get__(self):
  *             return self.context.puzzle_max_height             # <<<<<<<<<<<<<<
@@ -1030,13 +1048,13 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10max_height___get__(struct __pyx_o
  *         def __set__(self, unsigned int value):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_self->context.puzzle_max_height); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_self->context.puzzle_max_height); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":91
+  /* "_libpuzzle.pyx":89
  *     property max_height:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1047,7 +1065,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10max_height___get__(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_height.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_height.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1055,7 +1073,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10max_height___get__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":94
+/* "_libpuzzle.pyx":92
  *             return self.context.puzzle_max_height
  * 
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
@@ -1064,8 +1082,8 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10max_height___get__(struct __pyx_o
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_10max_height_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_10max_height_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_10max_height_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_10max_height_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
   unsigned int __pyx_v_value;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1074,22 +1092,22 @@ static int __pyx_pw_9libpuzzle_6Puzzle_10max_height_3__set__(PyObject *__pyx_v_s
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_value); {
-    __pyx_v_value = __Pyx_PyInt_As_unsigned_int(__pyx_arg_value); if (unlikely((__pyx_v_value == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_value = __Pyx_PyInt_As_unsigned_int(__pyx_arg_value); if (unlikely((__pyx_v_value == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_height.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_height.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((unsigned int)__pyx_v_value));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_10max_height_2__set__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((unsigned int)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value) {
+static int __pyx_pf_10_libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value) {
   int __pyx_v_response;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -1100,7 +1118,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_9l
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "libpuzzle.pyx":95
+  /* "_libpuzzle.pyx":93
  * 
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_max_height(&self.context, value)             # <<<<<<<<<<<<<<
@@ -1109,7 +1127,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_9l
  */
   __pyx_v_response = puzzle_set_max_height((&__pyx_v_self->context), __pyx_v_value);
 
-  /* "libpuzzle.pyx":96
+  /* "_libpuzzle.pyx":94
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1119,20 +1137,20 @@ static int __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_9l
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
 
-    /* "libpuzzle.pyx":97
+    /* "_libpuzzle.pyx":95
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set max height')             # <<<<<<<<<<<<<<
  * 
  *     property lambdas:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":96
+    /* "_libpuzzle.pyx":94
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1141,7 +1159,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_9l
  */
   }
 
-  /* "libpuzzle.pyx":94
+  /* "_libpuzzle.pyx":92
  *             return self.context.puzzle_max_height
  * 
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
@@ -1154,14 +1172,14 @@ static int __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_9l
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_height.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_height.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":101
+/* "_libpuzzle.pyx":99
  *     property lambdas:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1170,19 +1188,19 @@ static int __pyx_pf_9libpuzzle_6Puzzle_10max_height_2__set__(struct __pyx_obj_9l
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_7lambdas_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_7lambdas_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_7lambdas_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_7lambdas_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_7lambdas___get__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_7lambdas___get__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1191,7 +1209,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_9
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "libpuzzle.pyx":102
+  /* "_libpuzzle.pyx":100
  * 
  *         def __get__(self):
  *             return self.context.puzzle_lambdas             # <<<<<<<<<<<<<<
@@ -1199,13 +1217,13 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_9
  *         def __set__(self, unsigned int value):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_self->context.puzzle_lambdas); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_self->context.puzzle_lambdas); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":101
+  /* "_libpuzzle.pyx":99
  *     property lambdas:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1216,7 +1234,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_9
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.lambdas.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.lambdas.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1224,7 +1242,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_9
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":104
+/* "_libpuzzle.pyx":102
  *             return self.context.puzzle_lambdas
  * 
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
@@ -1233,8 +1251,8 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7lambdas___get__(struct __pyx_obj_9
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_7lambdas_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_7lambdas_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_7lambdas_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_7lambdas_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
   unsigned int __pyx_v_value;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1243,22 +1261,22 @@ static int __pyx_pw_9libpuzzle_6Puzzle_7lambdas_3__set__(PyObject *__pyx_v_self,
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_value); {
-    __pyx_v_value = __Pyx_PyInt_As_unsigned_int(__pyx_arg_value); if (unlikely((__pyx_v_value == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_value = __Pyx_PyInt_As_unsigned_int(__pyx_arg_value); if (unlikely((__pyx_v_value == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.lambdas.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.lambdas.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((unsigned int)__pyx_v_value));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_7lambdas_2__set__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((unsigned int)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value) {
+static int __pyx_pf_10_libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, unsigned int __pyx_v_value) {
   int __pyx_v_response;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -1269,7 +1287,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_9libpu
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "libpuzzle.pyx":105
+  /* "_libpuzzle.pyx":103
  * 
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_lambdas(&self.context, value)             # <<<<<<<<<<<<<<
@@ -1278,7 +1296,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_9libpu
  */
   __pyx_v_response = puzzle_set_lambdas((&__pyx_v_self->context), __pyx_v_value);
 
-  /* "libpuzzle.pyx":106
+  /* "_libpuzzle.pyx":104
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1288,20 +1306,20 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_9libpu
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
 
-    /* "libpuzzle.pyx":107
+    /* "_libpuzzle.pyx":105
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set lambdas')             # <<<<<<<<<<<<<<
  * 
  *     property noise_cutoff:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":106
+    /* "_libpuzzle.pyx":104
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1310,7 +1328,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_9libpu
  */
   }
 
-  /* "libpuzzle.pyx":104
+  /* "_libpuzzle.pyx":102
  *             return self.context.puzzle_lambdas
  * 
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
@@ -1323,14 +1341,14 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_9libpu
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.lambdas.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.lambdas.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":111
+/* "_libpuzzle.pyx":109
  *     property noise_cutoff:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1339,19 +1357,19 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7lambdas_2__set__(struct __pyx_obj_9libpu
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_12noise_cutoff_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_12noise_cutoff_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_12noise_cutoff_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_12noise_cutoff_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff___get__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_12noise_cutoff___get__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1360,7 +1378,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "libpuzzle.pyx":112
+  /* "_libpuzzle.pyx":110
  * 
  *         def __get__(self):
  *             return self.context.puzzle_noise_cutoff             # <<<<<<<<<<<<<<
@@ -1368,13 +1386,13 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx
  *         def __set__(self, double value):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->context.puzzle_noise_cutoff); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->context.puzzle_noise_cutoff); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":111
+  /* "_libpuzzle.pyx":109
  *     property noise_cutoff:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1385,7 +1403,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.noise_cutoff.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.noise_cutoff.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1393,7 +1411,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":114
+/* "_libpuzzle.pyx":112
  *             return self.context.puzzle_noise_cutoff
  * 
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
@@ -1402,8 +1420,8 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff___get__(struct __pyx
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_12noise_cutoff_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_12noise_cutoff_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_12noise_cutoff_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_12noise_cutoff_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
   double __pyx_v_value;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1412,22 +1430,22 @@ static int __pyx_pw_9libpuzzle_6Puzzle_12noise_cutoff_3__set__(PyObject *__pyx_v
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_value); {
-    __pyx_v_value = __pyx_PyFloat_AsDouble(__pyx_arg_value); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_value = __pyx_PyFloat_AsDouble(__pyx_arg_value); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.noise_cutoff.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.noise_cutoff.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((double)__pyx_v_value));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_12noise_cutoff_2__set__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((double)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value) {
+static int __pyx_pf_10_libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value) {
   int __pyx_v_response;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -1438,7 +1456,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "libpuzzle.pyx":115
+  /* "_libpuzzle.pyx":113
  * 
  *         def __set__(self, double value):
  *             response = puzzle_set_noise_cutoff(&self.context, value)             # <<<<<<<<<<<<<<
@@ -1447,7 +1465,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_
  */
   __pyx_v_response = puzzle_set_noise_cutoff((&__pyx_v_self->context), __pyx_v_value);
 
-  /* "libpuzzle.pyx":116
+  /* "_libpuzzle.pyx":114
  *         def __set__(self, double value):
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1457,20 +1475,20 @@ static int __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
 
-    /* "libpuzzle.pyx":117
+    /* "_libpuzzle.pyx":115
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set noise cutoff')             # <<<<<<<<<<<<<<
  * 
  *     property p_ratio:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":116
+    /* "_libpuzzle.pyx":114
  *         def __set__(self, double value):
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1479,7 +1497,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_
  */
   }
 
-  /* "libpuzzle.pyx":114
+  /* "_libpuzzle.pyx":112
  *             return self.context.puzzle_noise_cutoff
  * 
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
@@ -1492,14 +1510,14 @@ static int __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.noise_cutoff.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.noise_cutoff.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":121
+/* "_libpuzzle.pyx":119
  *     property p_ratio:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1508,19 +1526,19 @@ static int __pyx_pf_9libpuzzle_6Puzzle_12noise_cutoff_2__set__(struct __pyx_obj_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_7p_ratio_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_7p_ratio_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_7p_ratio_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_7p_ratio_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_7p_ratio___get__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_7p_ratio___get__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1529,7 +1547,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_9
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "libpuzzle.pyx":122
+  /* "_libpuzzle.pyx":120
  * 
  *         def __get__(self):
  *             return self.context.puzzle_p_ratio             # <<<<<<<<<<<<<<
@@ -1537,13 +1555,13 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_9
  *         def __set__(self, double value):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->context.puzzle_p_ratio); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->context.puzzle_p_ratio); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":121
+  /* "_libpuzzle.pyx":119
  *     property p_ratio:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1554,7 +1572,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_9
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.p_ratio.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.p_ratio.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1562,7 +1580,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_9
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":124
+/* "_libpuzzle.pyx":122
  *             return self.context.puzzle_p_ratio
  * 
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
@@ -1571,8 +1589,8 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_7p_ratio___get__(struct __pyx_obj_9
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_7p_ratio_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_7p_ratio_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_7p_ratio_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_7p_ratio_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
   double __pyx_v_value;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1581,22 +1599,22 @@ static int __pyx_pw_9libpuzzle_6Puzzle_7p_ratio_3__set__(PyObject *__pyx_v_self,
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_value); {
-    __pyx_v_value = __pyx_PyFloat_AsDouble(__pyx_arg_value); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_value = __pyx_PyFloat_AsDouble(__pyx_arg_value); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.p_ratio.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.p_ratio.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((double)__pyx_v_value));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_7p_ratio_2__set__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((double)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value) {
+static int __pyx_pf_10_libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value) {
   int __pyx_v_response;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -1607,7 +1625,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_9libpu
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "libpuzzle.pyx":125
+  /* "_libpuzzle.pyx":123
  * 
  *         def __set__(self, double value):
  *             response = puzzle_set_p_ratio(&self.context, value)             # <<<<<<<<<<<<<<
@@ -1616,7 +1634,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_9libpu
  */
   __pyx_v_response = puzzle_set_p_ratio((&__pyx_v_self->context), __pyx_v_value);
 
-  /* "libpuzzle.pyx":126
+  /* "_libpuzzle.pyx":124
  *         def __set__(self, double value):
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1626,20 +1644,20 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_9libpu
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
 
-    /* "libpuzzle.pyx":127
+    /* "_libpuzzle.pyx":125
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
  * 
  *     property contrast_barrier_for_cropping:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":126
+    /* "_libpuzzle.pyx":124
  *         def __set__(self, double value):
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1648,7 +1666,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_9libpu
  */
   }
 
-  /* "libpuzzle.pyx":124
+  /* "_libpuzzle.pyx":122
  *             return self.context.puzzle_p_ratio
  * 
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
@@ -1661,14 +1679,14 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_9libpu
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.p_ratio.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.p_ratio.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":131
+/* "_libpuzzle.pyx":129
  *     property contrast_barrier_for_cropping:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1677,19 +1695,19 @@ static int __pyx_pf_9libpuzzle_6Puzzle_7p_ratio_2__set__(struct __pyx_obj_9libpu
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping___get__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping___get__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1698,7 +1716,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping___g
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "libpuzzle.pyx":132
+  /* "_libpuzzle.pyx":130
  * 
  *         def __get__(self):
  *             return self.context.puzzle_contrast_barrier_for_cropping             # <<<<<<<<<<<<<<
@@ -1706,13 +1724,13 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping___g
  *         def __set__(self, double value):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->context.puzzle_contrast_barrier_for_cropping); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->context.puzzle_contrast_barrier_for_cropping); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":131
+  /* "_libpuzzle.pyx":129
  *     property contrast_barrier_for_cropping:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1723,7 +1741,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping___g
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.contrast_barrier_for_cropping.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.contrast_barrier_for_cropping.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1731,7 +1749,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping___g
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":134
+/* "_libpuzzle.pyx":132
  *             return self.context.puzzle_contrast_barrier_for_cropping
  * 
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
@@ -1740,8 +1758,8 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping___g
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
   double __pyx_v_value;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1750,22 +1768,22 @@ static int __pyx_pw_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_3__set__(
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_value); {
-    __pyx_v_value = __pyx_PyFloat_AsDouble(__pyx_arg_value); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_value = __pyx_PyFloat_AsDouble(__pyx_arg_value); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.contrast_barrier_for_cropping.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.contrast_barrier_for_cropping.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((double)__pyx_v_value));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((double)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value) {
+static int __pyx_pf_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value) {
   int __pyx_v_response;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -1776,7 +1794,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "libpuzzle.pyx":135
+  /* "_libpuzzle.pyx":133
  * 
  *         def __set__(self, double value):
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)             # <<<<<<<<<<<<<<
@@ -1785,7 +1803,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(
  */
   __pyx_v_response = puzzle_set_contrast_barrier_for_cropping((&__pyx_v_self->context), __pyx_v_value);
 
-  /* "libpuzzle.pyx":136
+  /* "_libpuzzle.pyx":134
  *         def __set__(self, double value):
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1795,20 +1813,20 @@ static int __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
 
-    /* "libpuzzle.pyx":137
+    /* "_libpuzzle.pyx":135
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
  * 
  *     property max_cropping_ratio:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":136
+    /* "_libpuzzle.pyx":134
  *         def __set__(self, double value):
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1817,7 +1835,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(
  */
   }
 
-  /* "libpuzzle.pyx":134
+  /* "_libpuzzle.pyx":132
  *             return self.context.puzzle_contrast_barrier_for_cropping
  * 
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
@@ -1830,14 +1848,14 @@ static int __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.contrast_barrier_for_cropping.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.contrast_barrier_for_cropping.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":141
+/* "_libpuzzle.pyx":139
  *     property max_cropping_ratio:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1846,19 +1864,19 @@ static int __pyx_pf_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_2__set__(
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_18max_cropping_ratio_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_18max_cropping_ratio_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_18max_cropping_ratio_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_18max_cropping_ratio_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio___get__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_18max_cropping_ratio___get__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1867,7 +1885,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "libpuzzle.pyx":142
+  /* "_libpuzzle.pyx":140
  * 
  *         def __get__(self):
  *             return self.context.puzzle_max_cropping_ratio             # <<<<<<<<<<<<<<
@@ -1875,13 +1893,13 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct
  *         def __set__(self, double value):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->context.puzzle_max_cropping_ratio); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->context.puzzle_max_cropping_ratio); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":141
+  /* "_libpuzzle.pyx":139
  *     property max_cropping_ratio:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1892,7 +1910,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_cropping_ratio.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_cropping_ratio.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1900,7 +1918,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":144
+/* "_libpuzzle.pyx":142
  *             return self.context.puzzle_max_cropping_ratio
  * 
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
@@ -1909,8 +1927,8 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio___get__(struct
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_18max_cropping_ratio_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_18max_cropping_ratio_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_18max_cropping_ratio_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_18max_cropping_ratio_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
   double __pyx_v_value;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1919,22 +1937,22 @@ static int __pyx_pw_9libpuzzle_6Puzzle_18max_cropping_ratio_3__set__(PyObject *_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_value); {
-    __pyx_v_value = __pyx_PyFloat_AsDouble(__pyx_arg_value); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_value = __pyx_PyFloat_AsDouble(__pyx_arg_value); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_cropping_ratio.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_cropping_ratio.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((double)__pyx_v_value));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((double)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value) {
+static int __pyx_pf_10_libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, double __pyx_v_value) {
   int __pyx_v_response;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -1945,7 +1963,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "libpuzzle.pyx":145
+  /* "_libpuzzle.pyx":143
  * 
  *         def __set__(self, double value):
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)             # <<<<<<<<<<<<<<
@@ -1954,7 +1972,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __py
  */
   __pyx_v_response = puzzle_set_max_cropping_ratio((&__pyx_v_self->context), __pyx_v_value);
 
-  /* "libpuzzle.pyx":146
+  /* "_libpuzzle.pyx":144
  *         def __set__(self, double value):
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1964,20 +1982,20 @@ static int __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __py
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
 
-    /* "libpuzzle.pyx":147
+    /* "_libpuzzle.pyx":145
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
  * 
  *     property autocrop:
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":146
+    /* "_libpuzzle.pyx":144
  *         def __set__(self, double value):
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -1986,7 +2004,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __py
  */
   }
 
-  /* "libpuzzle.pyx":144
+  /* "_libpuzzle.pyx":142
  *             return self.context.puzzle_max_cropping_ratio
  * 
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
@@ -1999,14 +2017,14 @@ static int __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __py
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.max_cropping_ratio.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.max_cropping_ratio.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":151
+/* "_libpuzzle.pyx":149
  *     property autocrop:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -2015,19 +2033,19 @@ static int __pyx_pf_9libpuzzle_6Puzzle_18max_cropping_ratio_2__set__(struct __py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_8autocrop_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_8autocrop_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_8autocrop_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_8autocrop_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_8autocrop___get__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_8autocrop___get__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2036,7 +2054,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "libpuzzle.pyx":152
+  /* "_libpuzzle.pyx":150
  * 
  *         def __get__(self):
  *             return <bint>self.context.puzzle_enable_autocrop             # <<<<<<<<<<<<<<
@@ -2044,13 +2062,13 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_
  *         def __set__(self, bint value):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_self->context.puzzle_enable_autocrop != 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_self->context.puzzle_enable_autocrop != 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":151
+  /* "_libpuzzle.pyx":149
  *     property autocrop:
  * 
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -2061,7 +2079,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.autocrop.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.autocrop.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2069,7 +2087,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":154
+/* "_libpuzzle.pyx":152
  *             return <bint>self.context.puzzle_enable_autocrop
  * 
  *         def __set__(self, bint value):             # <<<<<<<<<<<<<<
@@ -2078,8 +2096,8 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8autocrop___get__(struct __pyx_obj_
  */
 
 /* Python wrapper */
-static int __pyx_pw_9libpuzzle_6Puzzle_8autocrop_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
-static int __pyx_pw_9libpuzzle_6Puzzle_8autocrop_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
+static int __pyx_pw_10_libpuzzle_6Puzzle_8autocrop_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value); /*proto*/
+static int __pyx_pw_10_libpuzzle_6Puzzle_8autocrop_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_arg_value) {
   int __pyx_v_value;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2088,22 +2106,22 @@ static int __pyx_pw_9libpuzzle_6Puzzle_8autocrop_3__set__(PyObject *__pyx_v_self
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_value); {
-    __pyx_v_value = __Pyx_PyObject_IsTrue(__pyx_arg_value); if (unlikely((__pyx_v_value == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 154; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_value = __Pyx_PyObject_IsTrue(__pyx_arg_value); if (unlikely((__pyx_v_value == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.autocrop.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.autocrop.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_8autocrop_2__set__(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((int)__pyx_v_value));
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_8autocrop_2__set__(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((int)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_9libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, int __pyx_v_value) {
+static int __pyx_pf_10_libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, int __pyx_v_value) {
   int __pyx_v_response;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -2114,7 +2132,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_9libp
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "libpuzzle.pyx":155
+  /* "_libpuzzle.pyx":153
  * 
  *         def __set__(self, bint value):
  *             response = puzzle_set_autocrop(&self.context, value)             # <<<<<<<<<<<<<<
@@ -2123,7 +2141,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_9libp
  */
   __pyx_v_response = puzzle_set_autocrop((&__pyx_v_self->context), __pyx_v_value);
 
-  /* "libpuzzle.pyx":156
+  /* "_libpuzzle.pyx":154
  *         def __set__(self, bint value):
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -2133,20 +2151,20 @@ static int __pyx_pf_9libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_9libp
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
 
-    /* "libpuzzle.pyx":157
+    /* "_libpuzzle.pyx":155
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
  * 
- *     def fill_cvec_from_file(self, filename):
+ *     cpdef fill_cvec_from_file(self, char* filename):
  */
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":156
+    /* "_libpuzzle.pyx":154
  *         def __set__(self, bint value):
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
@@ -2155,7 +2173,7 @@ static int __pyx_pf_9libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_9libp
  */
   }
 
-  /* "libpuzzle.pyx":154
+  /* "_libpuzzle.pyx":152
  *             return <bint>self.context.puzzle_enable_autocrop
  * 
  *         def __set__(self, bint value):             # <<<<<<<<<<<<<<
@@ -2168,35 +2186,23 @@ static int __pyx_pf_9libpuzzle_6Puzzle_8autocrop_2__set__(struct __pyx_obj_9libp
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.autocrop.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.autocrop.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":159
+/* "_libpuzzle.pyx":157
  *                 raise AttributeError('unable to set p_ratio')
  * 
- *     def fill_cvec_from_file(self, filename):             # <<<<<<<<<<<<<<
+ *     cpdef fill_cvec_from_file(self, char* filename):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCvec cvec
- *         filename = filename.encode('utf8')
+ * 
  */
 
-/* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_5fill_cvec_from_file(PyObject *__pyx_v_self, PyObject *__pyx_v_filename); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_5fill_cvec_from_file(PyObject *__pyx_v_self, PyObject *__pyx_v_filename) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("fill_cvec_from_file (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_4fill_cvec_from_file(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((PyObject *)__pyx_v_filename));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_filename) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_5fill_cvec_from_file(PyObject *__pyx_v_self, PyObject *__pyx_arg_filename); /*proto*/
+static PyObject *__pyx_f_10_libpuzzle_6Puzzle_fill_cvec_from_file(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, char *__pyx_v_filename, int __pyx_skip_dispatch) {
   PuzzleCvec __pyx_v_cvec;
   Py_ssize_t __pyx_v_length;
   PyObject *__pyx_v_response = NULL;
@@ -2204,35 +2210,63 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_o
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
-  char const *__pyx_t_3;
-  int __pyx_t_4;
-  size_t __pyx_t_5;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
   PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
-  PyObject *__pyx_t_8 = NULL;
+  int __pyx_t_7;
+  size_t __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fill_cvec_from_file", 0);
-  __Pyx_INCREF(__pyx_v_filename);
+  /* Check if called by wrapper */
+  if (unlikely(__pyx_skip_dispatch)) ;
+  /* Check if overridden in Python */
+  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_fill_cvec_from_file); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10_libpuzzle_6Puzzle_5fill_cvec_from_file)) {
+      __Pyx_XDECREF(__pyx_r);
+      __pyx_t_3 = __Pyx_PyBytes_FromString(__pyx_v_filename); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
+      if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_4))) {
+        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+        if (likely(__pyx_t_5)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+          __Pyx_INCREF(__pyx_t_5);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_4, function);
+        }
+      }
+      if (!__pyx_t_5) {
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+        __Pyx_GOTREF(__pyx_t_2);
+      } else {
+        __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_6);
+        __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_5); __pyx_t_5 = NULL;
+        __Pyx_GIVEREF(__pyx_t_3);
+        PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_3);
+        __pyx_t_3 = 0;
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_r = __pyx_t_2;
+      __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      goto __pyx_L0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
 
-  /* "libpuzzle.pyx":161
- *     def fill_cvec_from_file(self, filename):
+  /* "_libpuzzle.pyx":160
  *         cdef PuzzleCvec cvec
- *         filename = filename.encode('utf8')             # <<<<<<<<<<<<<<
- * 
- *         puzzle_init_cvec(&self.context, &cvec)
- */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_filename, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF_SET(__pyx_v_filename, __pyx_t_2);
-  __pyx_t_2 = 0;
-
-  /* "libpuzzle.pyx":163
- *         filename = filename.encode('utf8')
  * 
  *         puzzle_init_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
@@ -2240,18 +2274,17 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_o
  */
   puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-  /* "libpuzzle.pyx":164
+  /* "_libpuzzle.pyx":161
  * 
  *         puzzle_init_cvec(&self.context, &cvec)
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):             # <<<<<<<<<<<<<<
  *             puzzle_free_cvec(&self.context, &cvec);
  *             raise PuzzleError('lalala')
  */
-  __pyx_t_3 = __Pyx_PyObject_AsString(__pyx_v_filename); if (unlikely((!__pyx_t_3) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_4 = (puzzle_fill_cvec_from_file((&__pyx_v_self->context), (&__pyx_v_cvec), __pyx_t_3) != 0);
-  if (__pyx_t_4) {
+  __pyx_t_7 = (puzzle_fill_cvec_from_file((&__pyx_v_self->context), (&__pyx_v_cvec), __pyx_v_filename) != 0);
+  if (__pyx_t_7) {
 
-    /* "libpuzzle.pyx":165
+    /* "_libpuzzle.pyx":162
  *         puzzle_init_cvec(&self.context, &cvec)
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
  *             puzzle_free_cvec(&self.context, &cvec);             # <<<<<<<<<<<<<<
@@ -2260,23 +2293,23 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_o
  */
     puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-    /* "libpuzzle.pyx":166
+    /* "_libpuzzle.pyx":163
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
  *             puzzle_free_cvec(&self.context, &cvec);
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
  * 
  *         cdef Py_ssize_t length = 0
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_Raise(__pyx_t_1, 0, 0, 0);
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_Raise(__pyx_t_2, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":164
+    /* "_libpuzzle.pyx":161
  * 
  *         puzzle_init_cvec(&self.context, &cvec)
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):             # <<<<<<<<<<<<<<
@@ -2285,7 +2318,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_o
  */
   }
 
-  /* "libpuzzle.pyx":168
+  /* "_libpuzzle.pyx":165
  *             raise PuzzleError('lalala')
  * 
  *         cdef Py_ssize_t length = 0             # <<<<<<<<<<<<<<
@@ -2294,145 +2327,198 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_o
  */
   __pyx_v_length = 0;
 
-  /* "libpuzzle.pyx":169
+  /* "_libpuzzle.pyx":166
  * 
  *         cdef Py_ssize_t length = 0
  *         length = cvec.sizeof_vec             # <<<<<<<<<<<<<<
  * 
- *         response = Signature(cvec.vec[:length])
+ *         response = cvec.vec[:length]
  */
-  __pyx_t_5 = __pyx_v_cvec.sizeof_vec;
-  __pyx_v_length = __pyx_t_5;
+  __pyx_t_8 = __pyx_v_cvec.sizeof_vec;
+  __pyx_v_length = __pyx_t_8;
 
-  /* "libpuzzle.pyx":171
+  /* "_libpuzzle.pyx":168
  *         length = cvec.sizeof_vec
  * 
- *         response = Signature(cvec.vec[:length])             # <<<<<<<<<<<<<<
+ *         response = cvec.vec[:length]             # <<<<<<<<<<<<<<
  *         puzzle_free_cvec(&self.context, &cvec);
  *         return response
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_Signature); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 171; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_cvec.vec) + 0, __pyx_v_length - 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 168; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_6 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_cvec.vec) + 0, __pyx_v_length - 0); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 171; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = NULL;
-  if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_7)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_7);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-    }
-  }
-  if (!__pyx_t_7) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 171; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_GOTREF(__pyx_t_1);
-  } else {
-    __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 171; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_7); __pyx_t_7 = NULL;
-    __Pyx_GIVEREF(__pyx_t_6);
-    PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_6);
-    __pyx_t_6 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 171; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  }
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_v_response = __pyx_t_1;
-  __pyx_t_1 = 0;
+  __pyx_v_response = ((PyObject*)__pyx_t_2);
+  __pyx_t_2 = 0;
 
-  /* "libpuzzle.pyx":172
+  /* "_libpuzzle.pyx":169
  * 
- *         response = Signature(cvec.vec[:length])
+ *         response = cvec.vec[:length]
  *         puzzle_free_cvec(&self.context, &cvec);             # <<<<<<<<<<<<<<
  *         return response
  * 
  */
   puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-  /* "libpuzzle.pyx":173
- *         response = Signature(cvec.vec[:length])
+  /* "_libpuzzle.pyx":170
+ *         response = cvec.vec[:length]
  *         puzzle_free_cvec(&self.context, &cvec);
  *         return response             # <<<<<<<<<<<<<<
  * 
- *     def compress_cvec(self, sign):
+ *     cpdef compress_cvec(self, sign):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_response);
   __pyx_r = __pyx_v_response;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":159
+  /* "_libpuzzle.pyx":157
  *                 raise AttributeError('unable to set p_ratio')
  * 
- *     def fill_cvec_from_file(self, filename):             # <<<<<<<<<<<<<<
+ *     cpdef fill_cvec_from_file(self, char* filename):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCvec cvec
- *         filename = filename.encode('utf8')
+ * 
  */
 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.fill_cvec_from_file", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.fill_cvec_from_file", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_response);
-  __Pyx_XDECREF(__pyx_v_filename);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":175
- *         return response
- * 
- *     def compress_cvec(self, sign):             # <<<<<<<<<<<<<<
- *         cdef PuzzleCompressedCvec compressed_cvec
- *         cdef PuzzleCvec cvec
- */
-
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_7compress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_7compress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_5fill_cvec_from_file(PyObject *__pyx_v_self, PyObject *__pyx_arg_filename); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_5fill_cvec_from_file(PyObject *__pyx_v_self, PyObject *__pyx_arg_filename) {
+  char *__pyx_v_filename;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("compress_cvec (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((PyObject *)__pyx_v_sign));
+  __Pyx_RefNannySetupContext("fill_cvec_from_file (wrapper)", 0);
+  assert(__pyx_arg_filename); {
+    __pyx_v_filename = __Pyx_PyObject_AsString(__pyx_arg_filename); if (unlikely((!__pyx_v_filename) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.fill_cvec_from_file", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_4fill_cvec_from_file(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((char *)__pyx_v_filename));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_4fill_cvec_from_file(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, char *__pyx_v_filename) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("fill_cvec_from_file", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_10_libpuzzle_6Puzzle_fill_cvec_from_file(__pyx_v_self, __pyx_v_filename, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.fill_cvec_from_file", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "_libpuzzle.pyx":172
+ *         return response
+ * 
+ *     cpdef compress_cvec(self, sign):             # <<<<<<<<<<<<<<
+ *         cdef PuzzleCompressedCvec compressed_cvec
+ *         cdef PuzzleCvec cvec
+ */
+
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_7compress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign); /*proto*/
+static PyObject *__pyx_f_10_libpuzzle_6Puzzle_compress_cvec(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign, int __pyx_skip_dispatch) {
   PuzzleCompressedCvec __pyx_v_compressed_cvec;
   PuzzleCvec __pyx_v_cvec;
   Py_ssize_t __pyx_v_length;
   PyObject *__pyx_v_response = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  signed char *__pyx_t_1;
-  Py_ssize_t __pyx_t_2;
-  int __pyx_t_3;
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  size_t __pyx_t_6;
-  PyObject *__pyx_t_7 = NULL;
-  PyObject *__pyx_t_8 = NULL;
-  PyObject *__pyx_t_9 = NULL;
+  signed char *__pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  int __pyx_t_8;
+  size_t __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("compress_cvec", 0);
+  /* Check if called by wrapper */
+  if (unlikely(__pyx_skip_dispatch)) ;
+  /* Check if overridden in Python */
+  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_compress_cvec); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10_libpuzzle_6Puzzle_7compress_cvec)) {
+      __Pyx_XDECREF(__pyx_r);
+      __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
+      if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_4)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+          __Pyx_INCREF(__pyx_t_4);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
+        }
+      }
+      if (!__pyx_t_4) {
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_sign); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+      } else {
+        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_5);
+        __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
+        __Pyx_INCREF(__pyx_v_sign);
+        __Pyx_GIVEREF(__pyx_v_sign);
+        PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_v_sign);
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_r = __pyx_t_2;
+      __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      goto __pyx_L0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
 
-  /* "libpuzzle.pyx":179
+  /* "_libpuzzle.pyx":176
  *         cdef PuzzleCvec cvec
  * 
  *         puzzle_init_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
@@ -2441,7 +2527,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
   puzzle_init_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
-  /* "libpuzzle.pyx":180
+  /* "_libpuzzle.pyx":177
  * 
  *         puzzle_init_compressed_cvec(&self.context, &compressed_cvec)
  *         puzzle_init_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
@@ -2450,37 +2536,37 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
   puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-  /* "libpuzzle.pyx":182
+  /* "_libpuzzle.pyx":179
  *         puzzle_init_cvec(&self.context, &cvec)
  * 
  *         cvec.vec = sign             # <<<<<<<<<<<<<<
  *         cvec.sizeof_vec = <size_t>len(sign)
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_AsSString(__pyx_v_sign); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 182; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_cvec.vec = __pyx_t_1;
+  __pyx_t_6 = __Pyx_PyObject_AsSString(__pyx_v_sign); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_cvec.vec = __pyx_t_6;
 
-  /* "libpuzzle.pyx":183
+  /* "_libpuzzle.pyx":180
  * 
  *         cvec.vec = sign
  *         cvec.sizeof_vec = <size_t>len(sign)             # <<<<<<<<<<<<<<
  * 
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):
  */
-  __pyx_t_2 = PyObject_Length(__pyx_v_sign); if (unlikely(__pyx_t_2 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 183; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_cvec.sizeof_vec = ((size_t)__pyx_t_2);
+  __pyx_t_7 = PyObject_Length(__pyx_v_sign); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_cvec.sizeof_vec = ((size_t)__pyx_t_7);
 
-  /* "libpuzzle.pyx":185
+  /* "_libpuzzle.pyx":182
  *         cvec.sizeof_vec = <size_t>len(sign)
  * 
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):             # <<<<<<<<<<<<<<
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             cvec.vec = NULL
  */
-  __pyx_t_3 = (puzzle_compress_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec), (&__pyx_v_cvec)) != 0);
-  if (__pyx_t_3) {
+  __pyx_t_8 = (puzzle_compress_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec), (&__pyx_v_cvec)) != 0);
+  if (__pyx_t_8) {
 
-    /* "libpuzzle.pyx":186
+    /* "_libpuzzle.pyx":183
  * 
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
@@ -2489,7 +2575,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
     puzzle_free_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
-    /* "libpuzzle.pyx":187
+    /* "_libpuzzle.pyx":184
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             cvec.vec = NULL             # <<<<<<<<<<<<<<
@@ -2498,7 +2584,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
     __pyx_v_cvec.vec = NULL;
 
-    /* "libpuzzle.pyx":188
+    /* "_libpuzzle.pyx":185
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             cvec.vec = NULL
  *             puzzle_free_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
@@ -2507,23 +2593,23 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
     puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-    /* "libpuzzle.pyx":189
+    /* "_libpuzzle.pyx":186
  *             cvec.vec = NULL
  *             puzzle_free_cvec(&self.context, &cvec)
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
  * 
  *         cdef Py_ssize_t length = 0
  */
-    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_Raise(__pyx_t_5, 0, 0, 0);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_Raise(__pyx_t_2, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":185
+    /* "_libpuzzle.pyx":182
  *         cvec.sizeof_vec = <size_t>len(sign)
  * 
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):             # <<<<<<<<<<<<<<
@@ -2532,7 +2618,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
   }
 
-  /* "libpuzzle.pyx":191
+  /* "_libpuzzle.pyx":188
  *             raise PuzzleError('lalala')
  * 
  *         cdef Py_ssize_t length = 0             # <<<<<<<<<<<<<<
@@ -2541,58 +2627,30 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
   __pyx_v_length = 0;
 
-  /* "libpuzzle.pyx":192
+  /* "_libpuzzle.pyx":189
  * 
  *         cdef Py_ssize_t length = 0
  *         length = compressed_cvec.sizeof_compressed_vec             # <<<<<<<<<<<<<<
  * 
- *         response = CompressedSignature(compressed_cvec.vec[:length])
+ *         response =compressed_cvec.vec[:length]
  */
-  __pyx_t_6 = __pyx_v_compressed_cvec.sizeof_compressed_vec;
-  __pyx_v_length = __pyx_t_6;
+  __pyx_t_9 = __pyx_v_compressed_cvec.sizeof_compressed_vec;
+  __pyx_v_length = __pyx_t_9;
 
-  /* "libpuzzle.pyx":194
+  /* "_libpuzzle.pyx":191
  *         length = compressed_cvec.sizeof_compressed_vec
  * 
- *         response = CompressedSignature(compressed_cvec.vec[:length])             # <<<<<<<<<<<<<<
+ *         response =compressed_cvec.vec[:length]             # <<<<<<<<<<<<<<
  * 
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_CompressedSignature); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 194; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_compressed_cvec.vec) + 0, __pyx_v_length - 0); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 194; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = NULL;
-  if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_8)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_8);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
-    }
-  }
-  if (!__pyx_t_8) {
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 194; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_GOTREF(__pyx_t_5);
-  } else {
-    __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 194; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_9);
-    __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_8); __pyx_t_8 = NULL;
-    __Pyx_GIVEREF(__pyx_t_7);
-    PyTuple_SET_ITEM(__pyx_t_9, 0+1, __pyx_t_7);
-    __pyx_t_7 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_9, NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 194; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  }
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_v_response = __pyx_t_5;
-  __pyx_t_5 = 0;
+  __pyx_t_2 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_compressed_cvec.vec) + 0, __pyx_v_length - 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_v_response = ((PyObject*)__pyx_t_2);
+  __pyx_t_2 = 0;
 
-  /* "libpuzzle.pyx":196
- *         response = CompressedSignature(compressed_cvec.vec[:length])
+  /* "_libpuzzle.pyx":193
+ *         response =compressed_cvec.vec[:length]
  * 
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
  *         cvec.vec = NULL
@@ -2600,7 +2658,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
   puzzle_free_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
-  /* "libpuzzle.pyx":197
+  /* "_libpuzzle.pyx":194
  * 
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *         cvec.vec = NULL             # <<<<<<<<<<<<<<
@@ -2609,7 +2667,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
   __pyx_v_cvec.vec = NULL;
 
-  /* "libpuzzle.pyx":198
+  /* "_libpuzzle.pyx":195
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *         cvec.vec = NULL
  *         puzzle_free_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
@@ -2618,35 +2676,35 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
  */
   puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-  /* "libpuzzle.pyx":199
+  /* "_libpuzzle.pyx":196
  *         cvec.vec = NULL
  *         puzzle_free_cvec(&self.context, &cvec)
  *         return response             # <<<<<<<<<<<<<<
  * 
- *     def uncompress_cvec(self, sign):
+ *     cpdef uncompress_cvec(self, sign):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_response);
   __pyx_r = __pyx_v_response;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":175
+  /* "_libpuzzle.pyx":172
  *         return response
  * 
- *     def compress_cvec(self, sign):             # <<<<<<<<<<<<<<
+ *     cpdef compress_cvec(self, sign):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCompressedCvec compressed_cvec
  *         cdef PuzzleCvec cvec
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.compress_cvec", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.compress_cvec", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_response);
   __Pyx_XGIVEREF(__pyx_r);
@@ -2654,49 +2712,117 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_9li
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":201
- *         return response
- * 
- *     def uncompress_cvec(self, sign):             # <<<<<<<<<<<<<<
- *         cdef PuzzleCompressedCvec compressed_cvec
- *         cdef PuzzleCvec cvec
- */
-
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_9uncompress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign); /*proto*/
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_9uncompress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_7compress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_7compress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("uncompress_cvec (wrapper)", 0);
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), ((PyObject *)__pyx_v_sign));
+  __Pyx_RefNannySetupContext("compress_cvec (wrapper)", 0);
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_6compress_cvec(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((PyObject *)__pyx_v_sign));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign) {
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_6compress_cvec(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("compress_cvec", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_10_libpuzzle_6Puzzle_compress_cvec(__pyx_v_self, __pyx_v_sign, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.compress_cvec", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "_libpuzzle.pyx":198
+ *         return response
+ * 
+ *     cpdef uncompress_cvec(self, sign):             # <<<<<<<<<<<<<<
+ *         cdef PuzzleCompressedCvec compressed_cvec
+ *         cdef PuzzleCvec cvec
+ */
+
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_9uncompress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign); /*proto*/
+static PyObject *__pyx_f_10_libpuzzle_6Puzzle_uncompress_cvec(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign, int __pyx_skip_dispatch) {
   PuzzleCompressedCvec __pyx_v_compressed_cvec;
   PuzzleCvec __pyx_v_cvec;
   Py_ssize_t __pyx_v_length;
   PyObject *__pyx_v_response = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  unsigned char *__pyx_t_1;
-  Py_ssize_t __pyx_t_2;
-  int __pyx_t_3;
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  size_t __pyx_t_6;
-  PyObject *__pyx_t_7 = NULL;
-  PyObject *__pyx_t_8 = NULL;
-  PyObject *__pyx_t_9 = NULL;
+  unsigned char *__pyx_t_6;
+  Py_ssize_t __pyx_t_7;
+  int __pyx_t_8;
+  size_t __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("uncompress_cvec", 0);
+  /* Check if called by wrapper */
+  if (unlikely(__pyx_skip_dispatch)) ;
+  /* Check if overridden in Python */
+  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_uncompress_cvec); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 198; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10_libpuzzle_6Puzzle_9uncompress_cvec)) {
+      __Pyx_XDECREF(__pyx_r);
+      __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
+      if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_4)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+          __Pyx_INCREF(__pyx_t_4);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
+        }
+      }
+      if (!__pyx_t_4) {
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_sign); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 198; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+      } else {
+        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 198; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_5);
+        __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
+        __Pyx_INCREF(__pyx_v_sign);
+        __Pyx_GIVEREF(__pyx_v_sign);
+        PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_v_sign);
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 198; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_r = __pyx_t_2;
+      __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      goto __pyx_L0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
 
-  /* "libpuzzle.pyx":205
+  /* "_libpuzzle.pyx":202
  *         cdef PuzzleCvec cvec
  * 
  *         puzzle_init_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
@@ -2705,7 +2831,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
   puzzle_init_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
-  /* "libpuzzle.pyx":206
+  /* "_libpuzzle.pyx":203
  * 
  *         puzzle_init_compressed_cvec(&self.context, &compressed_cvec)
  *         puzzle_init_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
@@ -2714,37 +2840,37 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
   puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-  /* "libpuzzle.pyx":208
+  /* "_libpuzzle.pyx":205
  *         puzzle_init_cvec(&self.context, &cvec)
  * 
  *         compressed_cvec.vec = sign             # <<<<<<<<<<<<<<
  *         compressed_cvec.sizeof_compressed_vec = <size_t>len(sign)
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_AsUString(__pyx_v_sign); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 208; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_compressed_cvec.vec = __pyx_t_1;
+  __pyx_t_6 = __Pyx_PyObject_AsUString(__pyx_v_sign); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_compressed_cvec.vec = __pyx_t_6;
 
-  /* "libpuzzle.pyx":209
+  /* "_libpuzzle.pyx":206
  * 
  *         compressed_cvec.vec = sign
  *         compressed_cvec.sizeof_compressed_vec = <size_t>len(sign)             # <<<<<<<<<<<<<<
  * 
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):
  */
-  __pyx_t_2 = PyObject_Length(__pyx_v_sign); if (unlikely(__pyx_t_2 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 209; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_compressed_cvec.sizeof_compressed_vec = ((size_t)__pyx_t_2);
+  __pyx_t_7 = PyObject_Length(__pyx_v_sign); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 206; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_compressed_cvec.sizeof_compressed_vec = ((size_t)__pyx_t_7);
 
-  /* "libpuzzle.pyx":211
+  /* "_libpuzzle.pyx":208
  *         compressed_cvec.sizeof_compressed_vec = <size_t>len(sign)
  * 
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):             # <<<<<<<<<<<<<<
  *             puzzle_free_cvec(&self.context, &cvec)
  *             compressed_cvec.vec = NULL
  */
-  __pyx_t_3 = (puzzle_uncompress_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec), (&__pyx_v_cvec)) != 0);
-  if (__pyx_t_3) {
+  __pyx_t_8 = (puzzle_uncompress_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec), (&__pyx_v_cvec)) != 0);
+  if (__pyx_t_8) {
 
-    /* "libpuzzle.pyx":212
+    /* "_libpuzzle.pyx":209
  * 
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):
  *             puzzle_free_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
@@ -2753,7 +2879,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
     puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-    /* "libpuzzle.pyx":213
+    /* "_libpuzzle.pyx":210
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):
  *             puzzle_free_cvec(&self.context, &cvec)
  *             compressed_cvec.vec = NULL             # <<<<<<<<<<<<<<
@@ -2762,7 +2888,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
     __pyx_v_compressed_cvec.vec = NULL;
 
-    /* "libpuzzle.pyx":214
+    /* "_libpuzzle.pyx":211
  *             puzzle_free_cvec(&self.context, &cvec)
  *             compressed_cvec.vec = NULL
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
@@ -2771,23 +2897,23 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
     puzzle_free_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
-    /* "libpuzzle.pyx":215
+    /* "_libpuzzle.pyx":212
  *             compressed_cvec.vec = NULL
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
  * 
  *         cdef Py_ssize_t length = 0
  */
-    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 215; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 215; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_Raise(__pyx_t_5, 0, 0, 0);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 215; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_Raise(__pyx_t_2, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "libpuzzle.pyx":211
+    /* "_libpuzzle.pyx":208
  *         compressed_cvec.sizeof_compressed_vec = <size_t>len(sign)
  * 
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):             # <<<<<<<<<<<<<<
@@ -2796,7 +2922,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
   }
 
-  /* "libpuzzle.pyx":217
+  /* "_libpuzzle.pyx":214
  *             raise PuzzleError('lalala')
  * 
  *         cdef Py_ssize_t length = 0             # <<<<<<<<<<<<<<
@@ -2805,67 +2931,39 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
   __pyx_v_length = 0;
 
-  /* "libpuzzle.pyx":218
+  /* "_libpuzzle.pyx":215
  * 
  *         cdef Py_ssize_t length = 0
  *         length = cvec.sizeof_vec             # <<<<<<<<<<<<<<
  * 
- *         response = Signature(cvec.vec[:length])
+ *         response = cvec.vec[:length]
  */
-  __pyx_t_6 = __pyx_v_cvec.sizeof_vec;
-  __pyx_v_length = __pyx_t_6;
+  __pyx_t_9 = __pyx_v_cvec.sizeof_vec;
+  __pyx_v_length = __pyx_t_9;
 
-  /* "libpuzzle.pyx":220
+  /* "_libpuzzle.pyx":217
  *         length = cvec.sizeof_vec
  * 
- *         response = Signature(cvec.vec[:length])             # <<<<<<<<<<<<<<
+ *         response = cvec.vec[:length]             # <<<<<<<<<<<<<<
  *         puzzle_free_cvec(&self.context, &cvec)
  *         compressed_cvec.vec = NULL
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_Signature); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_cvec.vec) + 0, __pyx_v_length - 0); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = NULL;
-  if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_8)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_8);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
-    }
-  }
-  if (!__pyx_t_8) {
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_GOTREF(__pyx_t_5);
-  } else {
-    __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_9);
-    __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_8); __pyx_t_8 = NULL;
-    __Pyx_GIVEREF(__pyx_t_7);
-    PyTuple_SET_ITEM(__pyx_t_9, 0+1, __pyx_t_7);
-    __pyx_t_7 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_9, NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  }
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_v_response = __pyx_t_5;
-  __pyx_t_5 = 0;
+  __pyx_t_2 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_cvec.vec) + 0, __pyx_v_length - 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 217; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_v_response = ((PyObject*)__pyx_t_2);
+  __pyx_t_2 = 0;
 
-  /* "libpuzzle.pyx":221
+  /* "_libpuzzle.pyx":218
  * 
- *         response = Signature(cvec.vec[:length])
+ *         response = cvec.vec[:length]
  *         puzzle_free_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
  *         compressed_cvec.vec = NULL
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  */
   puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
-  /* "libpuzzle.pyx":222
- *         response = Signature(cvec.vec[:length])
+  /* "_libpuzzle.pyx":219
+ *         response = cvec.vec[:length]
  *         puzzle_free_cvec(&self.context, &cvec)
  *         compressed_cvec.vec = NULL             # <<<<<<<<<<<<<<
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
@@ -2873,7 +2971,7 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
   __pyx_v_compressed_cvec.vec = NULL;
 
-  /* "libpuzzle.pyx":223
+  /* "_libpuzzle.pyx":220
  *         puzzle_free_cvec(&self.context, &cvec)
  *         compressed_cvec.vec = NULL
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
@@ -2882,35 +2980,35 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
  */
   puzzle_free_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
-  /* "libpuzzle.pyx":224
+  /* "_libpuzzle.pyx":221
  *         compressed_cvec.vec = NULL
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *         return response             # <<<<<<<<<<<<<<
  * 
- *     def vector_normalized_distance(self, sign1, sign2):
+ *     cpdef vector_normalized_distance(self, sign1, sign2):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_response);
   __pyx_r = __pyx_v_response;
   goto __pyx_L0;
 
-  /* "libpuzzle.pyx":201
+  /* "_libpuzzle.pyx":198
  *         return response
  * 
- *     def uncompress_cvec(self, sign):             # <<<<<<<<<<<<<<
+ *     cpdef uncompress_cvec(self, sign):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCompressedCvec compressed_cvec
  *         cdef PuzzleCvec cvec
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.uncompress_cvec", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.uncompress_cvec", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_response);
   __Pyx_XGIVEREF(__pyx_r);
@@ -2918,18 +3016,256 @@ static PyObject *__pyx_pf_9libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_9
   return __pyx_r;
 }
 
-/* "libpuzzle.pyx":226
+/* Python wrapper */
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_9uncompress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign); /*proto*/
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_9uncompress_cvec(PyObject *__pyx_v_self, PyObject *__pyx_v_sign) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("uncompress_cvec (wrapper)", 0);
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_8uncompress_cvec(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), ((PyObject *)__pyx_v_sign));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_8uncompress_cvec(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("uncompress_cvec", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_10_libpuzzle_6Puzzle_uncompress_cvec(__pyx_v_self, __pyx_v_sign, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 198; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.uncompress_cvec", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "_libpuzzle.pyx":223
  *         return response
  * 
- *     def vector_normalized_distance(self, sign1, sign2):             # <<<<<<<<<<<<<<
- *         """Computes the distance between two signatures.
+ *     cpdef vector_normalized_distance(self, sign1, sign2):             # <<<<<<<<<<<<<<
+ *         """Computes the distance between two vectors.
  * 
  */
 
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_11vector_normalized_distance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_10_libpuzzle_6Puzzle_vector_normalized_distance(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign1, PyObject *__pyx_v_sign2, int __pyx_skip_dispatch) {
+  PuzzleCvec __pyx_v_cvec1;
+  PuzzleCvec __pyx_v_cvec2;
+  double __pyx_v_distance;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  Py_ssize_t __pyx_t_5;
+  PyObject *__pyx_t_6 = NULL;
+  signed char *__pyx_t_7;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("vector_normalized_distance", 0);
+  /* Check if called by wrapper */
+  if (unlikely(__pyx_skip_dispatch)) ;
+  /* Check if overridden in Python */
+  else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_vector_normalized_distance); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_10_libpuzzle_6Puzzle_11vector_normalized_distance)) {
+      __Pyx_XDECREF(__pyx_r);
+      __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
+      __pyx_t_5 = 0;
+      if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_4)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+          __Pyx_INCREF(__pyx_t_4);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
+          __pyx_t_5 = 1;
+        }
+      }
+      __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_6);
+      if (__pyx_t_4) {
+        __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
+      }
+      __Pyx_INCREF(__pyx_v_sign1);
+      __Pyx_GIVEREF(__pyx_v_sign1);
+      PyTuple_SET_ITEM(__pyx_t_6, 0+__pyx_t_5, __pyx_v_sign1);
+      __Pyx_INCREF(__pyx_v_sign2);
+      __Pyx_GIVEREF(__pyx_v_sign2);
+      PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_sign2);
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_r = __pyx_t_2;
+      __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      goto __pyx_L0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  }
+
+  /* "_libpuzzle.pyx":231
+ *         cdef double distance
+ * 
+ *         puzzle_init_cvec(&self.context, &cvec1)             # <<<<<<<<<<<<<<
+ *         puzzle_init_cvec(&self.context, &cvec2)
+ * 
+ */
+  puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec1));
+
+  /* "_libpuzzle.pyx":232
+ * 
+ *         puzzle_init_cvec(&self.context, &cvec1)
+ *         puzzle_init_cvec(&self.context, &cvec2)             # <<<<<<<<<<<<<<
+ * 
+ *         cvec1.vec = sign1
+ */
+  puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec2));
+
+  /* "_libpuzzle.pyx":234
+ *         puzzle_init_cvec(&self.context, &cvec2)
+ * 
+ *         cvec1.vec = sign1             # <<<<<<<<<<<<<<
+ *         cvec1.sizeof_vec = <size_t>len(sign1)
+ * 
+ */
+  __pyx_t_7 = __Pyx_PyObject_AsSString(__pyx_v_sign1); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_cvec1.vec = __pyx_t_7;
+
+  /* "_libpuzzle.pyx":235
+ * 
+ *         cvec1.vec = sign1
+ *         cvec1.sizeof_vec = <size_t>len(sign1)             # <<<<<<<<<<<<<<
+ * 
+ *         cvec2.vec = sign2
+ */
+  __pyx_t_5 = PyObject_Length(__pyx_v_sign1); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_cvec1.sizeof_vec = ((size_t)__pyx_t_5);
+
+  /* "_libpuzzle.pyx":237
+ *         cvec1.sizeof_vec = <size_t>len(sign1)
+ * 
+ *         cvec2.vec = sign2             # <<<<<<<<<<<<<<
+ *         cvec2.sizeof_vec = <size_t>len(sign2)
+ * 
+ */
+  __pyx_t_7 = __Pyx_PyObject_AsSString(__pyx_v_sign2); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_cvec2.vec = __pyx_t_7;
+
+  /* "_libpuzzle.pyx":238
+ * 
+ *         cvec2.vec = sign2
+ *         cvec2.sizeof_vec = <size_t>len(sign2)             # <<<<<<<<<<<<<<
+ * 
+ *         distance = puzzle_vector_normalized_distance(&self.context,
+ */
+  __pyx_t_5 = PyObject_Length(__pyx_v_sign2); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_v_cvec2.sizeof_vec = ((size_t)__pyx_t_5);
+
+  /* "_libpuzzle.pyx":240
+ *         cvec2.sizeof_vec = <size_t>len(sign2)
+ * 
+ *         distance = puzzle_vector_normalized_distance(&self.context,             # <<<<<<<<<<<<<<
+ *                                                      &cvec1,
+ *                                                      &cvec2,
+ */
+  __pyx_v_distance = puzzle_vector_normalized_distance((&__pyx_v_self->context), (&__pyx_v_cvec1), (&__pyx_v_cvec2), 0);
+
+  /* "_libpuzzle.pyx":244
+ *                                                      &cvec2,
+ *                                                      0)
+ *         cvec1.vec = NULL             # <<<<<<<<<<<<<<
+ *         cvec2.vec = NULL
+ *         puzzle_free_cvec(&self.context, &cvec1);
+ */
+  __pyx_v_cvec1.vec = NULL;
+
+  /* "_libpuzzle.pyx":245
+ *                                                      0)
+ *         cvec1.vec = NULL
+ *         cvec2.vec = NULL             # <<<<<<<<<<<<<<
+ *         puzzle_free_cvec(&self.context, &cvec1);
+ *         puzzle_free_cvec(&self.context, &cvec2);
+ */
+  __pyx_v_cvec2.vec = NULL;
+
+  /* "_libpuzzle.pyx":246
+ *         cvec1.vec = NULL
+ *         cvec2.vec = NULL
+ *         puzzle_free_cvec(&self.context, &cvec1);             # <<<<<<<<<<<<<<
+ *         puzzle_free_cvec(&self.context, &cvec2);
+ *         return distance
+ */
+  puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec1));
+
+  /* "_libpuzzle.pyx":247
+ *         cvec2.vec = NULL
+ *         puzzle_free_cvec(&self.context, &cvec1);
+ *         puzzle_free_cvec(&self.context, &cvec2);             # <<<<<<<<<<<<<<
+ *         return distance
+ */
+  puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec2));
+
+  /* "_libpuzzle.pyx":248
+ *         puzzle_free_cvec(&self.context, &cvec1);
+ *         puzzle_free_cvec(&self.context, &cvec2);
+ *         return distance             # <<<<<<<<<<<<<<
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_distance); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 248; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "_libpuzzle.pyx":223
+ *         return response
+ * 
+ *     cpdef vector_normalized_distance(self, sign1, sign2):             # <<<<<<<<<<<<<<
+ *         """Computes the distance between two vectors.
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.vector_normalized_distance", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 /* Python wrapper */
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_11vector_normalized_distance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9libpuzzle_6Puzzle_10vector_normalized_distance[] = "Computes the distance between two signatures.\n\n        Result is between 0.0 and 1.0\n        ";
-static PyObject *__pyx_pw_9libpuzzle_6Puzzle_11vector_normalized_distance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_11vector_normalized_distance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_10_libpuzzle_6Puzzle_10vector_normalized_distance[] = "Computes the distance between two vectors.\n\n        Result is between 0.0 and 1.0\n        ";
+static PyObject *__pyx_pw_10_libpuzzle_6Puzzle_11vector_normalized_distance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_sign1 = 0;
   PyObject *__pyx_v_sign2 = 0;
   int __pyx_lineno = 0;
@@ -2958,11 +3294,11 @@ static PyObject *__pyx_pw_9libpuzzle_6Puzzle_11vector_normalized_distance(PyObje
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_sign2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("vector_normalized_distance", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("vector_normalized_distance", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "vector_normalized_distance") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "vector_normalized_distance") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2975,170 +3311,48 @@ static PyObject *__pyx_pw_9libpuzzle_6Puzzle_11vector_normalized_distance(PyObje
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("vector_normalized_distance", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("vector_normalized_distance", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("libpuzzle.Puzzle.vector_normalized_distance", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.vector_normalized_distance", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9libpuzzle_6Puzzle_10vector_normalized_distance(((struct __pyx_obj_9libpuzzle_Puzzle *)__pyx_v_self), __pyx_v_sign1, __pyx_v_sign2);
+  __pyx_r = __pyx_pf_10_libpuzzle_6Puzzle_10vector_normalized_distance(((struct __pyx_obj_10_libpuzzle_Puzzle *)__pyx_v_self), __pyx_v_sign1, __pyx_v_sign2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9libpuzzle_6Puzzle_10vector_normalized_distance(struct __pyx_obj_9libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign1, PyObject *__pyx_v_sign2) {
-  PuzzleCvec __pyx_v_cvec1;
-  PuzzleCvec __pyx_v_cvec2;
-  double __pyx_v_distance;
+static PyObject *__pyx_pf_10_libpuzzle_6Puzzle_10vector_normalized_distance(struct __pyx_obj_10_libpuzzle_Puzzle *__pyx_v_self, PyObject *__pyx_v_sign1, PyObject *__pyx_v_sign2) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  signed char *__pyx_t_1;
-  Py_ssize_t __pyx_t_2;
-  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_1 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("vector_normalized_distance", 0);
-
-  /* "libpuzzle.pyx":234
- *         cdef double distance
- * 
- *         puzzle_init_cvec(&self.context, &cvec1)             # <<<<<<<<<<<<<<
- *         puzzle_init_cvec(&self.context, &cvec2)
- * 
- */
-  puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec1));
-
-  /* "libpuzzle.pyx":235
- * 
- *         puzzle_init_cvec(&self.context, &cvec1)
- *         puzzle_init_cvec(&self.context, &cvec2)             # <<<<<<<<<<<<<<
- * 
- *         cvec1.vec = sign1
- */
-  puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec2));
-
-  /* "libpuzzle.pyx":237
- *         puzzle_init_cvec(&self.context, &cvec2)
- * 
- *         cvec1.vec = sign1             # <<<<<<<<<<<<<<
- *         cvec1.sizeof_vec = <size_t>len(sign1)
- * 
- */
-  __pyx_t_1 = __Pyx_PyObject_AsSString(__pyx_v_sign1); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_cvec1.vec = __pyx_t_1;
-
-  /* "libpuzzle.pyx":238
- * 
- *         cvec1.vec = sign1
- *         cvec1.sizeof_vec = <size_t>len(sign1)             # <<<<<<<<<<<<<<
- * 
- *         cvec2.vec = sign2
- */
-  __pyx_t_2 = PyObject_Length(__pyx_v_sign1); if (unlikely(__pyx_t_2 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_cvec1.sizeof_vec = ((size_t)__pyx_t_2);
-
-  /* "libpuzzle.pyx":240
- *         cvec1.sizeof_vec = <size_t>len(sign1)
- * 
- *         cvec2.vec = sign2             # <<<<<<<<<<<<<<
- *         cvec2.sizeof_vec = <size_t>len(sign2)
- * 
- */
-  __pyx_t_1 = __Pyx_PyObject_AsSString(__pyx_v_sign2); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_cvec2.vec = __pyx_t_1;
-
-  /* "libpuzzle.pyx":241
- * 
- *         cvec2.vec = sign2
- *         cvec2.sizeof_vec = <size_t>len(sign2)             # <<<<<<<<<<<<<<
- * 
- *         distance = puzzle_vector_normalized_distance(&self.context, &cvec1, &cvec2, 0)
- */
-  __pyx_t_2 = PyObject_Length(__pyx_v_sign2); if (unlikely(__pyx_t_2 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 241; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_v_cvec2.sizeof_vec = ((size_t)__pyx_t_2);
-
-  /* "libpuzzle.pyx":243
- *         cvec2.sizeof_vec = <size_t>len(sign2)
- * 
- *         distance = puzzle_vector_normalized_distance(&self.context, &cvec1, &cvec2, 0)             # <<<<<<<<<<<<<<
- *         cvec1.vec = NULL
- *         cvec2.vec = NULL
- */
-  __pyx_v_distance = puzzle_vector_normalized_distance((&__pyx_v_self->context), (&__pyx_v_cvec1), (&__pyx_v_cvec2), 0);
-
-  /* "libpuzzle.pyx":244
- * 
- *         distance = puzzle_vector_normalized_distance(&self.context, &cvec1, &cvec2, 0)
- *         cvec1.vec = NULL             # <<<<<<<<<<<<<<
- *         cvec2.vec = NULL
- *         puzzle_free_cvec(&self.context, &cvec1);
- */
-  __pyx_v_cvec1.vec = NULL;
-
-  /* "libpuzzle.pyx":245
- *         distance = puzzle_vector_normalized_distance(&self.context, &cvec1, &cvec2, 0)
- *         cvec1.vec = NULL
- *         cvec2.vec = NULL             # <<<<<<<<<<<<<<
- *         puzzle_free_cvec(&self.context, &cvec1);
- *         puzzle_free_cvec(&self.context, &cvec2);
- */
-  __pyx_v_cvec2.vec = NULL;
-
-  /* "libpuzzle.pyx":246
- *         cvec1.vec = NULL
- *         cvec2.vec = NULL
- *         puzzle_free_cvec(&self.context, &cvec1);             # <<<<<<<<<<<<<<
- *         puzzle_free_cvec(&self.context, &cvec2);
- *         return distance
- */
-  puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec1));
-
-  /* "libpuzzle.pyx":247
- *         cvec2.vec = NULL
- *         puzzle_free_cvec(&self.context, &cvec1);
- *         puzzle_free_cvec(&self.context, &cvec2);             # <<<<<<<<<<<<<<
- *         return distance
- * 
- */
-  puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec2));
-
-  /* "libpuzzle.pyx":248
- *         puzzle_free_cvec(&self.context, &cvec1);
- *         puzzle_free_cvec(&self.context, &cvec2);
- *         return distance             # <<<<<<<<<<<<<<
- * 
- * 
- */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_distance); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 248; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_r = __pyx_t_3;
-  __pyx_t_3 = 0;
+  __pyx_t_1 = __pyx_f_10_libpuzzle_6Puzzle_vector_normalized_distance(__pyx_v_self, __pyx_v_sign1, __pyx_v_sign2, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
   goto __pyx_L0;
-
-  /* "libpuzzle.pyx":226
- *         return response
- * 
- *     def vector_normalized_distance(self, sign1, sign2):             # <<<<<<<<<<<<<<
- *         """Computes the distance between two signatures.
- * 
- */
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("libpuzzle.Puzzle.vector_normalized_distance", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("_libpuzzle.Puzzle.vector_normalized_distance", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
+static struct __pyx_vtabstruct_10_libpuzzle_Puzzle __pyx_vtable_10_libpuzzle_Puzzle;
 
-static PyObject *__pyx_tp_new_9libpuzzle_Puzzle(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_10_libpuzzle_Puzzle(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_10_libpuzzle_Puzzle *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -3146,13 +3360,15 @@ static PyObject *__pyx_tp_new_9libpuzzle_Puzzle(PyTypeObject *t, CYTHON_UNUSED P
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  if (unlikely(__pyx_pw_9libpuzzle_6Puzzle_1__cinit__(o, __pyx_empty_tuple, NULL) < 0)) {
+  p = ((struct __pyx_obj_10_libpuzzle_Puzzle *)o);
+  p->__pyx_vtab = __pyx_vtabptr_10_libpuzzle_Puzzle;
+  if (unlikely(__pyx_pw_10_libpuzzle_6Puzzle_1__cinit__(o, __pyx_empty_tuple, NULL) < 0)) {
     Py_DECREF(o); o = 0;
   }
   return o;
 }
 
-static void __pyx_tp_dealloc_9libpuzzle_Puzzle(PyObject *o) {
+static void __pyx_tp_dealloc_10_libpuzzle_Puzzle(PyObject *o) {
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && (!PyType_IS_GC(Py_TYPE(o)) || !_PyGC_FINALIZED(o))) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -3162,20 +3378,20 @@ static void __pyx_tp_dealloc_9libpuzzle_Puzzle(PyObject *o) {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
     ++Py_REFCNT(o);
-    __pyx_pw_9libpuzzle_6Puzzle_3__dealloc__(o);
+    __pyx_pw_10_libpuzzle_6Puzzle_3__dealloc__(o);
     --Py_REFCNT(o);
     PyErr_Restore(etype, eval, etb);
   }
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static PyObject *__pyx_getprop_9libpuzzle_6Puzzle_max_width(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9libpuzzle_6Puzzle_9max_width_1__get__(o);
+static PyObject *__pyx_getprop_10_libpuzzle_6Puzzle_max_width(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10_libpuzzle_6Puzzle_9max_width_1__get__(o);
 }
 
-static int __pyx_setprop_9libpuzzle_6Puzzle_max_width(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10_libpuzzle_6Puzzle_max_width(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_9libpuzzle_6Puzzle_9max_width_3__set__(o, v);
+    return __pyx_pw_10_libpuzzle_6Puzzle_9max_width_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -3183,13 +3399,13 @@ static int __pyx_setprop_9libpuzzle_6Puzzle_max_width(PyObject *o, PyObject *v, 
   }
 }
 
-static PyObject *__pyx_getprop_9libpuzzle_6Puzzle_max_height(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9libpuzzle_6Puzzle_10max_height_1__get__(o);
+static PyObject *__pyx_getprop_10_libpuzzle_6Puzzle_max_height(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10_libpuzzle_6Puzzle_10max_height_1__get__(o);
 }
 
-static int __pyx_setprop_9libpuzzle_6Puzzle_max_height(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10_libpuzzle_6Puzzle_max_height(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_9libpuzzle_6Puzzle_10max_height_3__set__(o, v);
+    return __pyx_pw_10_libpuzzle_6Puzzle_10max_height_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -3197,13 +3413,13 @@ static int __pyx_setprop_9libpuzzle_6Puzzle_max_height(PyObject *o, PyObject *v,
   }
 }
 
-static PyObject *__pyx_getprop_9libpuzzle_6Puzzle_lambdas(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9libpuzzle_6Puzzle_7lambdas_1__get__(o);
+static PyObject *__pyx_getprop_10_libpuzzle_6Puzzle_lambdas(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10_libpuzzle_6Puzzle_7lambdas_1__get__(o);
 }
 
-static int __pyx_setprop_9libpuzzle_6Puzzle_lambdas(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10_libpuzzle_6Puzzle_lambdas(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_9libpuzzle_6Puzzle_7lambdas_3__set__(o, v);
+    return __pyx_pw_10_libpuzzle_6Puzzle_7lambdas_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -3211,13 +3427,13 @@ static int __pyx_setprop_9libpuzzle_6Puzzle_lambdas(PyObject *o, PyObject *v, CY
   }
 }
 
-static PyObject *__pyx_getprop_9libpuzzle_6Puzzle_noise_cutoff(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9libpuzzle_6Puzzle_12noise_cutoff_1__get__(o);
+static PyObject *__pyx_getprop_10_libpuzzle_6Puzzle_noise_cutoff(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10_libpuzzle_6Puzzle_12noise_cutoff_1__get__(o);
 }
 
-static int __pyx_setprop_9libpuzzle_6Puzzle_noise_cutoff(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10_libpuzzle_6Puzzle_noise_cutoff(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_9libpuzzle_6Puzzle_12noise_cutoff_3__set__(o, v);
+    return __pyx_pw_10_libpuzzle_6Puzzle_12noise_cutoff_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -3225,13 +3441,13 @@ static int __pyx_setprop_9libpuzzle_6Puzzle_noise_cutoff(PyObject *o, PyObject *
   }
 }
 
-static PyObject *__pyx_getprop_9libpuzzle_6Puzzle_p_ratio(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9libpuzzle_6Puzzle_7p_ratio_1__get__(o);
+static PyObject *__pyx_getprop_10_libpuzzle_6Puzzle_p_ratio(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10_libpuzzle_6Puzzle_7p_ratio_1__get__(o);
 }
 
-static int __pyx_setprop_9libpuzzle_6Puzzle_p_ratio(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10_libpuzzle_6Puzzle_p_ratio(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_9libpuzzle_6Puzzle_7p_ratio_3__set__(o, v);
+    return __pyx_pw_10_libpuzzle_6Puzzle_7p_ratio_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -3239,13 +3455,13 @@ static int __pyx_setprop_9libpuzzle_6Puzzle_p_ratio(PyObject *o, PyObject *v, CY
   }
 }
 
-static PyObject *__pyx_getprop_9libpuzzle_6Puzzle_contrast_barrier_for_cropping(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_1__get__(o);
+static PyObject *__pyx_getprop_10_libpuzzle_6Puzzle_contrast_barrier_for_cropping(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_1__get__(o);
 }
 
-static int __pyx_setprop_9libpuzzle_6Puzzle_contrast_barrier_for_cropping(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10_libpuzzle_6Puzzle_contrast_barrier_for_cropping(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_9libpuzzle_6Puzzle_29contrast_barrier_for_cropping_3__set__(o, v);
+    return __pyx_pw_10_libpuzzle_6Puzzle_29contrast_barrier_for_cropping_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -3253,13 +3469,13 @@ static int __pyx_setprop_9libpuzzle_6Puzzle_contrast_barrier_for_cropping(PyObje
   }
 }
 
-static PyObject *__pyx_getprop_9libpuzzle_6Puzzle_max_cropping_ratio(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9libpuzzle_6Puzzle_18max_cropping_ratio_1__get__(o);
+static PyObject *__pyx_getprop_10_libpuzzle_6Puzzle_max_cropping_ratio(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10_libpuzzle_6Puzzle_18max_cropping_ratio_1__get__(o);
 }
 
-static int __pyx_setprop_9libpuzzle_6Puzzle_max_cropping_ratio(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10_libpuzzle_6Puzzle_max_cropping_ratio(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_9libpuzzle_6Puzzle_18max_cropping_ratio_3__set__(o, v);
+    return __pyx_pw_10_libpuzzle_6Puzzle_18max_cropping_ratio_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -3267,13 +3483,13 @@ static int __pyx_setprop_9libpuzzle_6Puzzle_max_cropping_ratio(PyObject *o, PyOb
   }
 }
 
-static PyObject *__pyx_getprop_9libpuzzle_6Puzzle_autocrop(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9libpuzzle_6Puzzle_8autocrop_1__get__(o);
+static PyObject *__pyx_getprop_10_libpuzzle_6Puzzle_autocrop(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_10_libpuzzle_6Puzzle_8autocrop_1__get__(o);
 }
 
-static int __pyx_setprop_9libpuzzle_6Puzzle_autocrop(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_10_libpuzzle_6Puzzle_autocrop(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_9libpuzzle_6Puzzle_8autocrop_3__set__(o, v);
+    return __pyx_pw_10_libpuzzle_6Puzzle_8autocrop_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -3281,32 +3497,32 @@ static int __pyx_setprop_9libpuzzle_6Puzzle_autocrop(PyObject *o, PyObject *v, C
   }
 }
 
-static PyMethodDef __pyx_methods_9libpuzzle_Puzzle[] = {
-  {"fill_cvec_from_file", (PyCFunction)__pyx_pw_9libpuzzle_6Puzzle_5fill_cvec_from_file, METH_O, 0},
-  {"compress_cvec", (PyCFunction)__pyx_pw_9libpuzzle_6Puzzle_7compress_cvec, METH_O, 0},
-  {"uncompress_cvec", (PyCFunction)__pyx_pw_9libpuzzle_6Puzzle_9uncompress_cvec, METH_O, 0},
-  {"vector_normalized_distance", (PyCFunction)__pyx_pw_9libpuzzle_6Puzzle_11vector_normalized_distance, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9libpuzzle_6Puzzle_10vector_normalized_distance},
+static PyMethodDef __pyx_methods_10_libpuzzle_Puzzle[] = {
+  {"fill_cvec_from_file", (PyCFunction)__pyx_pw_10_libpuzzle_6Puzzle_5fill_cvec_from_file, METH_O, 0},
+  {"compress_cvec", (PyCFunction)__pyx_pw_10_libpuzzle_6Puzzle_7compress_cvec, METH_O, 0},
+  {"uncompress_cvec", (PyCFunction)__pyx_pw_10_libpuzzle_6Puzzle_9uncompress_cvec, METH_O, 0},
+  {"vector_normalized_distance", (PyCFunction)__pyx_pw_10_libpuzzle_6Puzzle_11vector_normalized_distance, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10_libpuzzle_6Puzzle_10vector_normalized_distance},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_9libpuzzle_Puzzle[] = {
-  {(char *)"max_width", __pyx_getprop_9libpuzzle_6Puzzle_max_width, __pyx_setprop_9libpuzzle_6Puzzle_max_width, 0, 0},
-  {(char *)"max_height", __pyx_getprop_9libpuzzle_6Puzzle_max_height, __pyx_setprop_9libpuzzle_6Puzzle_max_height, 0, 0},
-  {(char *)"lambdas", __pyx_getprop_9libpuzzle_6Puzzle_lambdas, __pyx_setprop_9libpuzzle_6Puzzle_lambdas, 0, 0},
-  {(char *)"noise_cutoff", __pyx_getprop_9libpuzzle_6Puzzle_noise_cutoff, __pyx_setprop_9libpuzzle_6Puzzle_noise_cutoff, 0, 0},
-  {(char *)"p_ratio", __pyx_getprop_9libpuzzle_6Puzzle_p_ratio, __pyx_setprop_9libpuzzle_6Puzzle_p_ratio, 0, 0},
-  {(char *)"contrast_barrier_for_cropping", __pyx_getprop_9libpuzzle_6Puzzle_contrast_barrier_for_cropping, __pyx_setprop_9libpuzzle_6Puzzle_contrast_barrier_for_cropping, 0, 0},
-  {(char *)"max_cropping_ratio", __pyx_getprop_9libpuzzle_6Puzzle_max_cropping_ratio, __pyx_setprop_9libpuzzle_6Puzzle_max_cropping_ratio, 0, 0},
-  {(char *)"autocrop", __pyx_getprop_9libpuzzle_6Puzzle_autocrop, __pyx_setprop_9libpuzzle_6Puzzle_autocrop, 0, 0},
+static struct PyGetSetDef __pyx_getsets_10_libpuzzle_Puzzle[] = {
+  {(char *)"max_width", __pyx_getprop_10_libpuzzle_6Puzzle_max_width, __pyx_setprop_10_libpuzzle_6Puzzle_max_width, 0, 0},
+  {(char *)"max_height", __pyx_getprop_10_libpuzzle_6Puzzle_max_height, __pyx_setprop_10_libpuzzle_6Puzzle_max_height, 0, 0},
+  {(char *)"lambdas", __pyx_getprop_10_libpuzzle_6Puzzle_lambdas, __pyx_setprop_10_libpuzzle_6Puzzle_lambdas, 0, 0},
+  {(char *)"noise_cutoff", __pyx_getprop_10_libpuzzle_6Puzzle_noise_cutoff, __pyx_setprop_10_libpuzzle_6Puzzle_noise_cutoff, 0, 0},
+  {(char *)"p_ratio", __pyx_getprop_10_libpuzzle_6Puzzle_p_ratio, __pyx_setprop_10_libpuzzle_6Puzzle_p_ratio, 0, 0},
+  {(char *)"contrast_barrier_for_cropping", __pyx_getprop_10_libpuzzle_6Puzzle_contrast_barrier_for_cropping, __pyx_setprop_10_libpuzzle_6Puzzle_contrast_barrier_for_cropping, 0, 0},
+  {(char *)"max_cropping_ratio", __pyx_getprop_10_libpuzzle_6Puzzle_max_cropping_ratio, __pyx_setprop_10_libpuzzle_6Puzzle_max_cropping_ratio, 0, 0},
+  {(char *)"autocrop", __pyx_getprop_10_libpuzzle_6Puzzle_autocrop, __pyx_setprop_10_libpuzzle_6Puzzle_autocrop, 0, 0},
   {0, 0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9libpuzzle_Puzzle = {
+static PyTypeObject __pyx_type_10_libpuzzle_Puzzle = {
   PyVarObject_HEAD_INIT(0, 0)
-  "libpuzzle.Puzzle", /*tp_name*/
-  sizeof(struct __pyx_obj_9libpuzzle_Puzzle), /*tp_basicsize*/
+  "_libpuzzle.Puzzle", /*tp_name*/
+  sizeof(struct __pyx_obj_10_libpuzzle_Puzzle), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9libpuzzle_Puzzle, /*tp_dealloc*/
+  __pyx_tp_dealloc_10_libpuzzle_Puzzle, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -3334,9 +3550,9 @@ static PyTypeObject __pyx_type_9libpuzzle_Puzzle = {
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9libpuzzle_Puzzle, /*tp_methods*/
+  __pyx_methods_10_libpuzzle_Puzzle, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_9libpuzzle_Puzzle, /*tp_getset*/
+  __pyx_getsets_10_libpuzzle_Puzzle, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
@@ -3344,7 +3560,7 @@ static PyTypeObject __pyx_type_9libpuzzle_Puzzle = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9libpuzzle_Puzzle, /*tp_new*/
+  __pyx_tp_new_10_libpuzzle_Puzzle, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -3370,7 +3586,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "libpuzzle",
+    "_libpuzzle",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -3382,24 +3598,23 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
-  {&__pyx_kp_s_0_0_1, __pyx_k_0_0_1, sizeof(__pyx_k_0_0_1), 0, 0, 1, 0},
   {&__pyx_n_s_AttributeError, __pyx_k_AttributeError, sizeof(__pyx_k_AttributeError), 0, 0, 1, 1},
-  {&__pyx_n_s_CompressedSignature, __pyx_k_CompressedSignature, sizeof(__pyx_k_CompressedSignature), 0, 0, 1, 1},
   {&__pyx_n_s_PuzzleError, __pyx_k_PuzzleError, sizeof(__pyx_k_PuzzleError), 0, 0, 1, 1},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
   {&__pyx_n_s_SIMILARITY_HIGH_THRESHOLD, __pyx_k_SIMILARITY_HIGH_THRESHOLD, sizeof(__pyx_k_SIMILARITY_HIGH_THRESHOLD), 0, 0, 1, 1},
   {&__pyx_n_s_SIMILARITY_LOWER_THRESHOLD, __pyx_k_SIMILARITY_LOWER_THRESHOLD, sizeof(__pyx_k_SIMILARITY_LOWER_THRESHOLD), 0, 0, 1, 1},
   {&__pyx_n_s_SIMILARITY_LOW_THRESHOLD, __pyx_k_SIMILARITY_LOW_THRESHOLD, sizeof(__pyx_k_SIMILARITY_LOW_THRESHOLD), 0, 0, 1, 1},
   {&__pyx_n_s_SIMILARITY_THRESHOLD, __pyx_k_SIMILARITY_THRESHOLD, sizeof(__pyx_k_SIMILARITY_THRESHOLD), 0, 0, 1, 1},
-  {&__pyx_n_s_Signature, __pyx_k_Signature, sizeof(__pyx_k_Signature), 0, 0, 1, 1},
+  {&__pyx_n_s_compress_cvec, __pyx_k_compress_cvec, sizeof(__pyx_k_compress_cvec), 0, 0, 1, 1},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
-  {&__pyx_n_s_encode, __pyx_k_encode, sizeof(__pyx_k_encode), 0, 0, 1, 1},
+  {&__pyx_n_s_fill_cvec_from_file, __pyx_k_fill_cvec_from_file, sizeof(__pyx_k_fill_cvec_from_file), 0, 0, 1, 1},
   {&__pyx_n_s_lalala, __pyx_k_lalala, sizeof(__pyx_k_lalala), 0, 0, 1, 1},
   {&__pyx_n_s_libpuzzle, __pyx_k_libpuzzle, sizeof(__pyx_k_libpuzzle), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_metaclass, __pyx_k_metaclass, sizeof(__pyx_k_metaclass), 0, 0, 1, 1},
   {&__pyx_n_s_module, __pyx_k_module, sizeof(__pyx_k_module), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
+  {&__pyx_n_s_pyx_vtable, __pyx_k_pyx_vtable, sizeof(__pyx_k_pyx_vtable), 0, 0, 1, 1},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_sign1, __pyx_k_sign1, sizeof(__pyx_k_sign1), 0, 0, 1, 1},
   {&__pyx_n_s_sign2, __pyx_k_sign2, sizeof(__pyx_k_sign2), 0, 0, 1, 1},
@@ -3409,13 +3624,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_unable_to_set_max_width, __pyx_k_unable_to_set_max_width, sizeof(__pyx_k_unable_to_set_max_width), 0, 0, 1, 0},
   {&__pyx_kp_s_unable_to_set_noise_cutoff, __pyx_k_unable_to_set_noise_cutoff, sizeof(__pyx_k_unable_to_set_noise_cutoff), 0, 0, 1, 0},
   {&__pyx_kp_s_unable_to_set_p_ratio, __pyx_k_unable_to_set_p_ratio, sizeof(__pyx_k_unable_to_set_p_ratio), 0, 0, 1, 0},
-  {&__pyx_n_s_utf8, __pyx_k_utf8, sizeof(__pyx_k_utf8), 0, 0, 1, 1},
-  {&__pyx_n_s_version, __pyx_k_version, sizeof(__pyx_k_version), 0, 0, 1, 1},
+  {&__pyx_n_s_uncompress_cvec, __pyx_k_uncompress_cvec, sizeof(__pyx_k_uncompress_cvec), 0, 0, 1, 1},
+  {&__pyx_n_s_vector_normalized_distance, __pyx_k_vector_normalized_distance, sizeof(__pyx_k_vector_normalized_distance), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -3425,137 +3640,126 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "libpuzzle.pyx":87
+  /* "_libpuzzle.pyx":85
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set max width')             # <<<<<<<<<<<<<<
  * 
  *     property max_height:
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_max_width); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_max_width); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "libpuzzle.pyx":97
+  /* "_libpuzzle.pyx":95
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set max height')             # <<<<<<<<<<<<<<
  * 
  *     property lambdas:
  */
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_max_height); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_max_height); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "libpuzzle.pyx":107
+  /* "_libpuzzle.pyx":105
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set lambdas')             # <<<<<<<<<<<<<<
  * 
  *     property noise_cutoff:
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_lambdas); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_lambdas); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "libpuzzle.pyx":117
+  /* "_libpuzzle.pyx":115
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set noise cutoff')             # <<<<<<<<<<<<<<
  * 
  *     property p_ratio:
  */
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_noise_cutoff); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_noise_cutoff); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "libpuzzle.pyx":127
+  /* "_libpuzzle.pyx":125
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
  * 
  *     property contrast_barrier_for_cropping:
  */
-  __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "libpuzzle.pyx":137
+  /* "_libpuzzle.pyx":135
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
  * 
  *     property max_cropping_ratio:
  */
-  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "libpuzzle.pyx":147
+  /* "_libpuzzle.pyx":145
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
  * 
  *     property autocrop:
  */
-  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "libpuzzle.pyx":157
+  /* "_libpuzzle.pyx":155
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
  * 
- *     def fill_cvec_from_file(self, filename):
+ *     cpdef fill_cvec_from_file(self, char* filename):
  */
-  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 157; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "libpuzzle.pyx":161
- *     def fill_cvec_from_file(self, filename):
- *         cdef PuzzleCvec cvec
- *         filename = filename.encode('utf8')             # <<<<<<<<<<<<<<
- * 
- *         puzzle_init_cvec(&self.context, &cvec)
- */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_n_s_utf8); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__9);
-  __Pyx_GIVEREF(__pyx_tuple__9);
-
-  /* "libpuzzle.pyx":166
+  /* "_libpuzzle.pyx":163
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
  *             puzzle_free_cvec(&self.context, &cvec);
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
  * 
  *         cdef Py_ssize_t length = 0
  */
-  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__10);
-  __Pyx_GIVEREF(__pyx_tuple__10);
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__9);
+  __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "libpuzzle.pyx":189
+  /* "_libpuzzle.pyx":186
  *             cvec.vec = NULL
  *             puzzle_free_cvec(&self.context, &cvec)
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
  * 
  *         cdef Py_ssize_t length = 0
  */
-  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 189; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__11);
-  __Pyx_GIVEREF(__pyx_tuple__11);
+  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__10);
+  __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "libpuzzle.pyx":215
+  /* "_libpuzzle.pyx":212
  *             compressed_cvec.vec = NULL
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
  * 
  *         cdef Py_ssize_t length = 0
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 215; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__12);
-  __Pyx_GIVEREF(__pyx_tuple__12);
+  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__11);
+  __Pyx_GIVEREF(__pyx_tuple__11);
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3571,11 +3775,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initlibpuzzle(void); /*proto*/
-PyMODINIT_FUNC initlibpuzzle(void)
+PyMODINIT_FUNC init_libpuzzle(void); /*proto*/
+PyMODINIT_FUNC init_libpuzzle(void)
 #else
-PyMODINIT_FUNC PyInit_libpuzzle(void); /*proto*/
-PyMODINIT_FUNC PyInit_libpuzzle(void)
+PyMODINIT_FUNC PyInit__libpuzzle(void); /*proto*/
+PyMODINIT_FUNC PyInit__libpuzzle(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -3595,7 +3799,7 @@ PyMODINIT_FUNC PyInit_libpuzzle(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_libpuzzle(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__libpuzzle(void)", 0);
   if (__Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3623,7 +3827,7 @@ PyMODINIT_FUNC PyInit_libpuzzle(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("libpuzzle", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("_libpuzzle", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -3640,14 +3844,14 @@ PyMODINIT_FUNC PyInit_libpuzzle(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_libpuzzle) {
+  if (__pyx_module_is_main__libpuzzle) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "libpuzzle")) {
-      if (unlikely(PyDict_SetItemString(modules, "libpuzzle", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "_libpuzzle")) {
+      if (unlikely(PyDict_SetItemString(modules, "_libpuzzle", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -3659,10 +3863,16 @@ PyMODINIT_FUNC PyInit_libpuzzle(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_9libpuzzle_Puzzle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_9libpuzzle_Puzzle.tp_print = 0;
-  if (PyObject_SetAttrString(__pyx_m, "Puzzle", (PyObject *)&__pyx_type_9libpuzzle_Puzzle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_9libpuzzle_Puzzle = &__pyx_type_9libpuzzle_Puzzle;
+  __pyx_vtabptr_10_libpuzzle_Puzzle = &__pyx_vtable_10_libpuzzle_Puzzle;
+  __pyx_vtable_10_libpuzzle_Puzzle.fill_cvec_from_file = (PyObject *(*)(struct __pyx_obj_10_libpuzzle_Puzzle *, char *, int __pyx_skip_dispatch))__pyx_f_10_libpuzzle_6Puzzle_fill_cvec_from_file;
+  __pyx_vtable_10_libpuzzle_Puzzle.compress_cvec = (PyObject *(*)(struct __pyx_obj_10_libpuzzle_Puzzle *, PyObject *, int __pyx_skip_dispatch))__pyx_f_10_libpuzzle_6Puzzle_compress_cvec;
+  __pyx_vtable_10_libpuzzle_Puzzle.uncompress_cvec = (PyObject *(*)(struct __pyx_obj_10_libpuzzle_Puzzle *, PyObject *, int __pyx_skip_dispatch))__pyx_f_10_libpuzzle_6Puzzle_uncompress_cvec;
+  __pyx_vtable_10_libpuzzle_Puzzle.vector_normalized_distance = (PyObject *(*)(struct __pyx_obj_10_libpuzzle_Puzzle *, PyObject *, PyObject *, int __pyx_skip_dispatch))__pyx_f_10_libpuzzle_6Puzzle_vector_normalized_distance;
+  if (PyType_Ready(&__pyx_type_10_libpuzzle_Puzzle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_10_libpuzzle_Puzzle.tp_print = 0;
+  if (__Pyx_SetVtable(__pyx_type_10_libpuzzle_Puzzle.tp_dict, __pyx_vtabptr_10_libpuzzle_Puzzle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "Puzzle", (PyObject *)&__pyx_type_10_libpuzzle_Puzzle) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_10_libpuzzle_Puzzle = &__pyx_type_10_libpuzzle_Puzzle;
   /*--- Type import code ---*/
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
@@ -3671,137 +3881,81 @@ PyMODINIT_FUNC PyInit_libpuzzle(void)
   if (__Pyx_patch_abc() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
 
-  /* "libpuzzle.pyx":57
+  /* "_libpuzzle.pyx":57
  *     double puzzle_vector_normalized_distance(PuzzleContext * const context, const PuzzleCvec * const cvec1, const PuzzleCvec * const cvec2, const int fix_for_texts)
- * 
- * __version__ = '0.0.1'             # <<<<<<<<<<<<<<
- * 
- * SIMILARITY_THRESHOLD = PUZZLE_CVEC_SIMILARITY_THRESHOLD
- */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_version, __pyx_kp_s_0_0_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-
-  /* "libpuzzle.pyx":59
- * __version__ = '0.0.1'
  * 
  * SIMILARITY_THRESHOLD = PUZZLE_CVEC_SIMILARITY_THRESHOLD             # <<<<<<<<<<<<<<
  * SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD
  * SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD
  */
-  __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SIMILARITY_THRESHOLD, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SIMILARITY_THRESHOLD, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "libpuzzle.pyx":60
+  /* "_libpuzzle.pyx":58
  * 
  * SIMILARITY_THRESHOLD = PUZZLE_CVEC_SIMILARITY_THRESHOLD
  * SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD             # <<<<<<<<<<<<<<
  * SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD
  * SIMILARITY_LOWER_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOWER_THRESHOLD
  */
-  __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SIMILARITY_HIGH_THRESHOLD, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SIMILARITY_HIGH_THRESHOLD, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "libpuzzle.pyx":61
+  /* "_libpuzzle.pyx":59
  * SIMILARITY_THRESHOLD = PUZZLE_CVEC_SIMILARITY_THRESHOLD
  * SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD
  * SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD             # <<<<<<<<<<<<<<
  * SIMILARITY_LOWER_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOWER_THRESHOLD
  * 
  */
-  __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SIMILARITY_LOW_THRESHOLD, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SIMILARITY_LOW_THRESHOLD, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "libpuzzle.pyx":62
+  /* "_libpuzzle.pyx":60
  * SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD
  * SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD
  * SIMILARITY_LOWER_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOWER_THRESHOLD             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_LOWER_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_LOWER_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SIMILARITY_LOWER_THRESHOLD, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SIMILARITY_LOWER_THRESHOLD, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "libpuzzle.pyx":65
+  /* "_libpuzzle.pyx":63
  * 
  * 
  * class PuzzleError(RuntimeError):             # <<<<<<<<<<<<<<
  *     pass
  * 
  */
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_builtin_RuntimeError);
   __Pyx_GIVEREF(__pyx_builtin_RuntimeError);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_builtin_RuntimeError);
-  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_PuzzleError, __pyx_n_s_PuzzleError, (PyObject *) NULL, __pyx_n_s_libpuzzle, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_PuzzleError, __pyx_n_s_PuzzleError, (PyObject *) NULL, __pyx_n_s_libpuzzle, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_PuzzleError, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_PuzzleError, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PuzzleError, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PuzzleError, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "libpuzzle.pyx":251
- * 
- * 
- * class Signature(bytes):             # <<<<<<<<<<<<<<
- *     pass
- * 
- */
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(((PyObject *)(&PyBytes_Type)));
-  __Pyx_GIVEREF(((PyObject *)(&PyBytes_Type)));
-  PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)(&PyBytes_Type)));
-  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_Signature, __pyx_n_s_Signature, (PyObject *) NULL, __pyx_n_s_libpuzzle, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_Signature, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Signature, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "libpuzzle.pyx":255
- * 
- * 
- * class CompressedSignature(bytes):             # <<<<<<<<<<<<<<
- *     pass
- */
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 255; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(((PyObject *)(&PyBytes_Type)));
-  __Pyx_GIVEREF(((PyObject *)(&PyBytes_Type)));
-  PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)(&PyBytes_Type)));
-  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 255; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_CompressedSignature, __pyx_n_s_CompressedSignature, (PyObject *) NULL, __pyx_n_s_libpuzzle, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 255; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_CompressedSignature, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 255; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CompressedSignature, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 255; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "libpuzzle.pyx":1
+  /* "_libpuzzle.pyx":1
  * # distutils: libraries = puzzle gd             # <<<<<<<<<<<<<<
- * # dist---utils: include_dirs = /usr/include
+ * # distutils: include_dirs = /usr/include
  * 
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3819,11 +3973,11 @@ PyMODINIT_FUNC PyInit_libpuzzle(void)
   __Pyx_XDECREF(__pyx_t_4);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init libpuzzle", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init _libpuzzle", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init libpuzzle");
+    PyErr_SetString(PyExc_ImportError, "init _libpuzzle");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4138,23 +4292,6 @@ bad:
 }
 #endif
 
-static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name) {
-    PyObject *result;
-#if CYTHON_COMPILING_IN_CPYTHON
-    result = PyDict_GetItem(__pyx_d, name);
-    if (likely(result)) {
-        Py_INCREF(result);
-    } else {
-#else
-    result = PyObject_GetItem(__pyx_d, name);
-    if (!result) {
-        PyErr_Clear();
-#endif
-        result = __Pyx_GetBuiltinName(name);
-    }
-    return result;
-}
-
 #if CYTHON_COMPILING_IN_CPYTHON
 static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject *arg) {
     PyObject *self, *result;
@@ -4207,6 +4344,23 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObjec
     return result;
 }
 #endif
+
+static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name) {
+    PyObject *result;
+#if CYTHON_COMPILING_IN_CPYTHON
+    result = PyDict_GetItem(__pyx_d, name);
+    if (likely(result)) {
+        Py_INCREF(result);
+    } else {
+#else
+    result = PyObject_GetItem(__pyx_d, name);
+    if (!result) {
+        PyErr_Clear();
+#endif
+        result = __Pyx_GetBuiltinName(name);
+    }
+    return result;
+}
 
 static void __Pyx_RaiseDoubleKeywordsError(
     const char* func_name,
@@ -4319,6 +4473,23 @@ invalid_keyword:
         function_name, key);
     #endif
 bad:
+    return -1;
+}
+
+static int __Pyx_SetVtable(PyObject *dict, void *vtable) {
+#if PY_VERSION_HEX >= 0x02070000
+    PyObject *ob = PyCapsule_New(vtable, 0, 0);
+#else
+    PyObject *ob = PyCObject_FromVoidPtr(vtable, 0);
+#endif
+    if (!ob)
+        goto bad;
+    if (PyDict_SetItem(dict, __pyx_n_s_pyx_vtable, ob) < 0)
+        goto bad;
+    Py_DECREF(ob);
+    return 0;
+bad:
+    Py_XDECREF(ob);
     return -1;
 }
 

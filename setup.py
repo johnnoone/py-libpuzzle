@@ -1,20 +1,23 @@
-from setuptools import setup
-from distutils.extension import Extension
+#!/usr/bin/env python
+
+from setuptools import setup, Extension
 import os
+import versioneer
 
 if os.environ.get('ERRORIST_DEVELOPMENT_MODE', None) == 'libpuzzle':
     from Cython.Build import cythonize
-    extensions = cythonize('libpuzzle.pyx')
-    print('caca')
+    extensions = cythonize('_libpuzzle.pyx')
 else:
-    extensions = [Extension("libpuzzle", ["libpuzzle.c"])]
-    print('pipi')
+    extensions = [Extension("_libpuzzle", ["_libpuzzle.c"])]
 
 setup(
     name='libpuzzle',
-    version='0.0.1',
+    version=versioneer.get_version(),
     description='Quickly find visually similar images',
     ext_modules=extensions,
+    install_requires=[
+        'six'
+    ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: MIT License',
@@ -25,5 +28,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     url='https://lab.errorist.xyz/aio/pyrepo',
-    license='MIT'
+    license='MIT',
+    cmdclass=versioneer.get_cmdclass(),
 )
