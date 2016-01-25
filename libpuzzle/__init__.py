@@ -1,7 +1,10 @@
 from _libpuzzle import *
 from six import text_type
 
-__version__ = '0.0.1'
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
+
 __all__ = ['Puzzle',
            'PuzzleError',
            'Signature',
@@ -9,6 +12,16 @@ __all__ = ['Puzzle',
            'SIMILARITY_HIGH_THRESHOLD',
            'SIMILARITY_LOW_THRESHOLD',
            'SIMILARITY_LOWER_THRESHOLD']
+
+PICKLE_ATTRS = (
+    'max_width',
+    'max_height',
+    'lambdas',
+    'noise_cutoff',
+    'contrast_barrier_for_cropping',
+    'max_cropping_ratio',
+    'autocrop'
+)
 
 
 class Puzzle(Puzzle):
@@ -70,6 +83,24 @@ class Puzzle(Puzzle):
             value = value.compress().value
         return Signature(None, puzzle=self, compressed=value)
 
+    def __getstate__(self):
+        return {attr: getattr(self, attr) for attr in PICKLE_ATTRS}
+
+    def __setstate__(self, state):
+        for attr in PICKLE_ATTRS:
+            if attr in state:
+                setattr(self, attr, state[attr])
+
+    def __eq__(self, other):
+        if isinstance(other, Puzzle):
+            for attr in PICKLE_ATTRS:
+                if getattr(other, attr) == getattr(self, attr):
+                    continue
+                else:
+                    return False
+            else:
+                return True
+
 
 class Signature:
 
@@ -113,6 +144,14 @@ class Signature:
         sign2 = other.value
         return self.puzzle.vector_normalized_distance(sign1, sign2)
 
-from ._version import get_versions
-__version__ = get_versions()['version']
-del get_versions
+    def __getstate__(self):
+        return {
+            'value': self._value,
+            'compressed': self._compressed,
+            'puzzle': self.puzzle
+        }
+
+    def __setstate__(self, state):
+        self._value = state.get('value', None)
+        self._compressed = state.get('compressed', None)
+        self.puzzle = state.get('puzzle', None)

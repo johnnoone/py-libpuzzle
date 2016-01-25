@@ -1,4 +1,5 @@
 import os.path
+import pickle
 from libpuzzle import Puzzle, Signature, SIMILARITY_HIGH_THRESHOLD
 
 here = os.path.dirname(os.path.abspath(__file__))
@@ -65,7 +66,7 @@ def test_autocrop():
     assert puzzle.autocrop is False
 
 
-def test_cvec_from_file():
+def test_signatures():
     puzzle = Puzzle()
     sign1 = puzzle.from_filename(os.path.join(here, 'img1.jpg'))
 
@@ -115,3 +116,16 @@ def test_distance():
     distance = sign1.distance(sign4)
     assert distance == 0.7411632893603013
     assert SIMILARITY_HIGH_THRESHOLD < distance
+
+
+def test_pickling():
+    puzzle1 = Puzzle()
+    pick1 = pickle.dumps(puzzle1)
+    puzzle2 = pickle.loads(pick1)
+
+    sign1 = puzzle1.from_filename(os.path.join(here, 'img1.jpg'))
+    pick2 = pickle.dumps(sign1)
+    sign2 = pickle.loads(pick2)
+
+    assert sign1 == sign2
+    assert sign1.puzzle == sign2.puzzle == puzzle1 == puzzle2
