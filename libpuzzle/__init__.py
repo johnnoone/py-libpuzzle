@@ -1,4 +1,4 @@
-from _libpuzzle import *
+from libpuzzle.bases import *
 from six import text_type
 
 from ._version import get_versions

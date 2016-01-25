@@ -6,9 +6,9 @@ import versioneer
 
 if os.environ.get('ERRORIST_DEVELOPMENT_MODE', None) == 'libpuzzle':
     from Cython.Build import cythonize
-    extensions = cythonize('_libpuzzle.pyx')
+    extensions = cythonize('libpuzzle/bases.pyx')
 else:
-    extensions = [Extension("_libpuzzle", ["_libpuzzle.c"])]
+    extensions = [Extension("libpuzzle.bases", ["libpuzzle/bases.c"])]
 
 setup(
     name='libpuzzle',
