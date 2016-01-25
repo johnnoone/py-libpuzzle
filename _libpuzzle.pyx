@@ -1,5 +1,5 @@
 # distutils: libraries = puzzle gd
-# dist---utils: include_dirs = /usr/include
+# distutils: include_dirs = /usr/include
 
 cdef extern from "puzzle.h":
 
