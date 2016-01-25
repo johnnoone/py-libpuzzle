@@ -8,7 +8,10 @@ if os.environ.get('ERRORIST_DEVELOPMENT_MODE', None) == 'libpuzzle':
     from Cython.Build import cythonize
     extensions = cythonize('libpuzzle/bases.pyx')
 else:
-    extensions = [Extension("libpuzzle.bases", ["libpuzzle/bases.c"])]
+    extensions = [Extension("libpuzzle.bases",
+                            ["libpuzzle/bases.c"],
+                            include_dirs = ['/usr/include'],
+                            libraries = ['puzzle', 'gd'])]
 
 setup(
     name='libpuzzle',
