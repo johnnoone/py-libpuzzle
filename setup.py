@@ -17,6 +17,9 @@ setup(
     author='Xavier Barbosa',
     author_email='clint.northwood@gmail.com',
     ext_modules=extensions,
+    packages=[
+        'libpuzzle'
+    ],
     install_requires=[
         'six'
     ],
