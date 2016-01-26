@@ -10,6 +10,7 @@ if os.environ.get('ERRORIST_DEVELOPMENT_MODE', None) == 'libpuzzle':
 else:
     extensions = [Extension("libpuzzle.bases",
                             ["libpuzzle/bases.c"],
+                            depends= ['/usr/include/puzzle.h'],
                             include_dirs = ['/usr/include'],
                             libraries = ['puzzle', 'gd'])]
 

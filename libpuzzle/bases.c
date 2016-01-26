@@ -469,10 +469,10 @@ static const char *__pyx_f[] = {
 struct __pyx_obj_9libpuzzle_5bases_Puzzle;
 
 /* "libpuzzle/bases.pyx":67
- * 
- * 
+ *
+ *
  * cdef class Puzzle:             # <<<<<<<<<<<<<<
- * 
+ *
  *     cdef PuzzleContext context
  */
 struct __pyx_obj_9libpuzzle_5bases_Puzzle {
@@ -747,10 +747,10 @@ static PyObject *__pyx_tuple__11;
 
 /* "libpuzzle/bases.pyx":71
  *     cdef PuzzleContext context
- * 
+ *
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
  *         puzzle_init_context(&self.context)
- * 
+ *
  */
 
 /* Python wrapper */
@@ -775,20 +775,20 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle___cinit__(struct __pyx_obj_9libpuz
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
   /* "libpuzzle/bases.pyx":72
- * 
+ *
  *     def __cinit__(self):
  *         puzzle_init_context(&self.context)             # <<<<<<<<<<<<<<
- * 
+ *
  *     def __dealloc__(self):
  */
   puzzle_init_context((&__pyx_v_self->context));
 
   /* "libpuzzle/bases.pyx":71
  *     cdef PuzzleContext context
- * 
+ *
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
  *         puzzle_init_context(&self.context)
- * 
+ *
  */
 
   /* function exit code */
@@ -799,10 +799,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle___cinit__(struct __pyx_obj_9libpuz
 
 /* "libpuzzle/bases.pyx":74
  *         puzzle_init_context(&self.context)
- * 
+ *
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
  *         puzzle_free_context(&self.context)
- * 
+ *
  */
 
 /* Python wrapper */
@@ -821,20 +821,20 @@ static void __pyx_pf_9libpuzzle_5bases_6Puzzle_2__dealloc__(struct __pyx_obj_9li
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
   /* "libpuzzle/bases.pyx":75
- * 
+ *
  *     def __dealloc__(self):
  *         puzzle_free_context(&self.context)             # <<<<<<<<<<<<<<
- * 
+ *
  *     property max_width:
  */
   puzzle_free_context((&__pyx_v_self->context));
 
   /* "libpuzzle/bases.pyx":74
  *         puzzle_init_context(&self.context)
- * 
+ *
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
  *         puzzle_free_context(&self.context)
- * 
+ *
  */
 
   /* function exit code */
@@ -843,10 +843,10 @@ static void __pyx_pf_9libpuzzle_5bases_6Puzzle_2__dealloc__(struct __pyx_obj_9li
 
 /* "libpuzzle/bases.pyx":79
  *     property max_width:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_max_width
- * 
+ *
  */
 
 /* Python wrapper */
@@ -872,10 +872,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_9max_width___get__(struct __
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "libpuzzle/bases.pyx":80
- * 
+ *
  *         def __get__(self):
  *             return self.context.puzzle_max_width             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __set__(self, unsigned int value):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -887,10 +887,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_9max_width___get__(struct __
 
   /* "libpuzzle/bases.pyx":79
  *     property max_width:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_max_width
- * 
+ *
  */
 
   /* function exit code */
@@ -906,7 +906,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_9max_width___get__(struct __
 
 /* "libpuzzle/bases.pyx":82
  *             return self.context.puzzle_max_width
- * 
+ *
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:
@@ -950,7 +950,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_9max_width_2__set__(struct __pyx_o
   __Pyx_RefNannySetupContext("__set__", 0);
 
   /* "libpuzzle/bases.pyx":83
- * 
+ *
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_max_width(&self.context, value)             # <<<<<<<<<<<<<<
  *             if response:
@@ -963,7 +963,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_9max_width_2__set__(struct __pyx_o
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set max width')
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
@@ -972,7 +972,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_9max_width_2__set__(struct __pyx_o
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set max width')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property max_height:
  */
     __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -986,13 +986,13 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_9max_width_2__set__(struct __pyx_o
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set max width')
- * 
+ *
  */
   }
 
   /* "libpuzzle/bases.pyx":82
  *             return self.context.puzzle_max_width
- * 
+ *
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:
@@ -1012,10 +1012,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_9max_width_2__set__(struct __pyx_o
 
 /* "libpuzzle/bases.pyx":89
  *     property max_height:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_max_height
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1041,10 +1041,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_10max_height___get__(struct 
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "libpuzzle/bases.pyx":90
- * 
+ *
  *         def __get__(self):
  *             return self.context.puzzle_max_height             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __set__(self, unsigned int value):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1056,10 +1056,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_10max_height___get__(struct 
 
   /* "libpuzzle/bases.pyx":89
  *     property max_height:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_max_height
- * 
+ *
  */
 
   /* function exit code */
@@ -1075,7 +1075,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_10max_height___get__(struct 
 
 /* "libpuzzle/bases.pyx":92
  *             return self.context.puzzle_max_height
- * 
+ *
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:
@@ -1119,7 +1119,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_10max_height_2__set__(struct __pyx
   __Pyx_RefNannySetupContext("__set__", 0);
 
   /* "libpuzzle/bases.pyx":93
- * 
+ *
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_max_height(&self.context, value)             # <<<<<<<<<<<<<<
  *             if response:
@@ -1132,7 +1132,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_10max_height_2__set__(struct __pyx
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set max height')
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
@@ -1141,7 +1141,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_10max_height_2__set__(struct __pyx
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set max height')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property lambdas:
  */
     __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1155,13 +1155,13 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_10max_height_2__set__(struct __pyx
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set max height')
- * 
+ *
  */
   }
 
   /* "libpuzzle/bases.pyx":92
  *             return self.context.puzzle_max_height
- * 
+ *
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:
@@ -1181,10 +1181,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_10max_height_2__set__(struct __pyx
 
 /* "libpuzzle/bases.pyx":99
  *     property lambdas:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_lambdas
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1210,10 +1210,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_7lambdas___get__(struct __py
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "libpuzzle/bases.pyx":100
- * 
+ *
  *         def __get__(self):
  *             return self.context.puzzle_lambdas             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __set__(self, unsigned int value):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1225,10 +1225,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_7lambdas___get__(struct __py
 
   /* "libpuzzle/bases.pyx":99
  *     property lambdas:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_lambdas
- * 
+ *
  */
 
   /* function exit code */
@@ -1244,7 +1244,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_7lambdas___get__(struct __py
 
 /* "libpuzzle/bases.pyx":102
  *             return self.context.puzzle_lambdas
- * 
+ *
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:
@@ -1288,7 +1288,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7lambdas_2__set__(struct __pyx_obj
   __Pyx_RefNannySetupContext("__set__", 0);
 
   /* "libpuzzle/bases.pyx":103
- * 
+ *
  *         def __set__(self, unsigned int value):
  *             response = puzzle_set_lambdas(&self.context, value)             # <<<<<<<<<<<<<<
  *             if response:
@@ -1301,7 +1301,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7lambdas_2__set__(struct __pyx_obj
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set lambdas')
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
@@ -1310,7 +1310,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7lambdas_2__set__(struct __pyx_obj
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set lambdas')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property noise_cutoff:
  */
     __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1324,13 +1324,13 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7lambdas_2__set__(struct __pyx_obj
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set lambdas')
- * 
+ *
  */
   }
 
   /* "libpuzzle/bases.pyx":102
  *             return self.context.puzzle_lambdas
- * 
+ *
  *         def __set__(self, unsigned int value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:
@@ -1350,10 +1350,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7lambdas_2__set__(struct __pyx_obj
 
 /* "libpuzzle/bases.pyx":109
  *     property noise_cutoff:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_noise_cutoff
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1379,10 +1379,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_12noise_cutoff___get__(struc
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "libpuzzle/bases.pyx":110
- * 
+ *
  *         def __get__(self):
  *             return self.context.puzzle_noise_cutoff             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __set__(self, double value):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1394,10 +1394,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_12noise_cutoff___get__(struc
 
   /* "libpuzzle/bases.pyx":109
  *     property noise_cutoff:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_noise_cutoff
- * 
+ *
  */
 
   /* function exit code */
@@ -1413,7 +1413,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_12noise_cutoff___get__(struc
 
 /* "libpuzzle/bases.pyx":112
  *             return self.context.puzzle_noise_cutoff
- * 
+ *
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:
@@ -1457,7 +1457,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_12noise_cutoff_2__set__(struct __p
   __Pyx_RefNannySetupContext("__set__", 0);
 
   /* "libpuzzle/bases.pyx":113
- * 
+ *
  *         def __set__(self, double value):
  *             response = puzzle_set_noise_cutoff(&self.context, value)             # <<<<<<<<<<<<<<
  *             if response:
@@ -1470,7 +1470,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_12noise_cutoff_2__set__(struct __p
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set noise cutoff')
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
@@ -1479,7 +1479,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_12noise_cutoff_2__set__(struct __p
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set noise cutoff')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property p_ratio:
  */
     __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1493,13 +1493,13 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_12noise_cutoff_2__set__(struct __p
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set noise cutoff')
- * 
+ *
  */
   }
 
   /* "libpuzzle/bases.pyx":112
  *             return self.context.puzzle_noise_cutoff
- * 
+ *
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:
@@ -1519,10 +1519,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_12noise_cutoff_2__set__(struct __p
 
 /* "libpuzzle/bases.pyx":119
  *     property p_ratio:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_p_ratio
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1548,10 +1548,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_7p_ratio___get__(struct __py
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "libpuzzle/bases.pyx":120
- * 
+ *
  *         def __get__(self):
  *             return self.context.puzzle_p_ratio             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __set__(self, double value):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1563,10 +1563,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_7p_ratio___get__(struct __py
 
   /* "libpuzzle/bases.pyx":119
  *     property p_ratio:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_p_ratio
- * 
+ *
  */
 
   /* function exit code */
@@ -1582,7 +1582,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_7p_ratio___get__(struct __py
 
 /* "libpuzzle/bases.pyx":122
  *             return self.context.puzzle_p_ratio
- * 
+ *
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:
@@ -1626,7 +1626,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7p_ratio_2__set__(struct __pyx_obj
   __Pyx_RefNannySetupContext("__set__", 0);
 
   /* "libpuzzle/bases.pyx":123
- * 
+ *
  *         def __set__(self, double value):
  *             response = puzzle_set_p_ratio(&self.context, value)             # <<<<<<<<<<<<<<
  *             if response:
@@ -1639,7 +1639,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7p_ratio_2__set__(struct __pyx_obj
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
@@ -1648,7 +1648,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7p_ratio_2__set__(struct __pyx_obj
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property contrast_barrier_for_cropping:
  */
     __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1662,13 +1662,13 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7p_ratio_2__set__(struct __pyx_obj
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  */
   }
 
   /* "libpuzzle/bases.pyx":122
  *             return self.context.puzzle_p_ratio
- * 
+ *
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:
@@ -1688,10 +1688,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_7p_ratio_2__set__(struct __pyx_obj
 
 /* "libpuzzle/bases.pyx":129
  *     property contrast_barrier_for_cropping:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_contrast_barrier_for_cropping
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1717,10 +1717,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_29contrast_barrier_for_cropp
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "libpuzzle/bases.pyx":130
- * 
+ *
  *         def __get__(self):
  *             return self.context.puzzle_contrast_barrier_for_cropping             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __set__(self, double value):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1732,10 +1732,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_29contrast_barrier_for_cropp
 
   /* "libpuzzle/bases.pyx":129
  *     property contrast_barrier_for_cropping:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_contrast_barrier_for_cropping
- * 
+ *
  */
 
   /* function exit code */
@@ -1751,7 +1751,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_29contrast_barrier_for_cropp
 
 /* "libpuzzle/bases.pyx":132
  *             return self.context.puzzle_contrast_barrier_for_cropping
- * 
+ *
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:
@@ -1795,7 +1795,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_29contrast_barrier_for_cropping_2_
   __Pyx_RefNannySetupContext("__set__", 0);
 
   /* "libpuzzle/bases.pyx":133
- * 
+ *
  *         def __set__(self, double value):
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)             # <<<<<<<<<<<<<<
  *             if response:
@@ -1808,7 +1808,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_29contrast_barrier_for_cropping_2_
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
@@ -1817,7 +1817,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_29contrast_barrier_for_cropping_2_
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property max_cropping_ratio:
  */
     __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -1831,13 +1831,13 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_29contrast_barrier_for_cropping_2_
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  */
   }
 
   /* "libpuzzle/bases.pyx":132
  *             return self.context.puzzle_contrast_barrier_for_cropping
- * 
+ *
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:
@@ -1857,10 +1857,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_29contrast_barrier_for_cropping_2_
 
 /* "libpuzzle/bases.pyx":139
  *     property max_cropping_ratio:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_max_cropping_ratio
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1886,10 +1886,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_18max_cropping_ratio___get__
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "libpuzzle/bases.pyx":140
- * 
+ *
  *         def __get__(self):
  *             return self.context.puzzle_max_cropping_ratio             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __set__(self, double value):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1901,10 +1901,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_18max_cropping_ratio___get__
 
   /* "libpuzzle/bases.pyx":139
  *     property max_cropping_ratio:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return self.context.puzzle_max_cropping_ratio
- * 
+ *
  */
 
   /* function exit code */
@@ -1920,7 +1920,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_18max_cropping_ratio___get__
 
 /* "libpuzzle/bases.pyx":142
  *             return self.context.puzzle_max_cropping_ratio
- * 
+ *
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:
@@ -1964,7 +1964,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_18max_cropping_ratio_2__set__(stru
   __Pyx_RefNannySetupContext("__set__", 0);
 
   /* "libpuzzle/bases.pyx":143
- * 
+ *
  *         def __set__(self, double value):
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)             # <<<<<<<<<<<<<<
  *             if response:
@@ -1977,7 +1977,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_18max_cropping_ratio_2__set__(stru
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
@@ -1986,7 +1986,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_18max_cropping_ratio_2__set__(stru
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property autocrop:
  */
     __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2000,13 +2000,13 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_18max_cropping_ratio_2__set__(stru
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  */
   }
 
   /* "libpuzzle/bases.pyx":142
  *             return self.context.puzzle_max_cropping_ratio
- * 
+ *
  *         def __set__(self, double value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:
@@ -2026,10 +2026,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_18max_cropping_ratio_2__set__(stru
 
 /* "libpuzzle/bases.pyx":149
  *     property autocrop:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return <bint>self.context.puzzle_enable_autocrop
- * 
+ *
  */
 
 /* Python wrapper */
@@ -2055,10 +2055,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_8autocrop___get__(struct __p
   __Pyx_RefNannySetupContext("__get__", 0);
 
   /* "libpuzzle/bases.pyx":150
- * 
+ *
  *         def __get__(self):
  *             return <bint>self.context.puzzle_enable_autocrop             # <<<<<<<<<<<<<<
- * 
+ *
  *         def __set__(self, bint value):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2070,10 +2070,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_8autocrop___get__(struct __p
 
   /* "libpuzzle/bases.pyx":149
  *     property autocrop:
- * 
+ *
  *         def __get__(self):             # <<<<<<<<<<<<<<
  *             return <bint>self.context.puzzle_enable_autocrop
- * 
+ *
  */
 
   /* function exit code */
@@ -2089,7 +2089,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_8autocrop___get__(struct __p
 
 /* "libpuzzle/bases.pyx":152
  *             return <bint>self.context.puzzle_enable_autocrop
- * 
+ *
  *         def __set__(self, bint value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:
@@ -2133,7 +2133,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_8autocrop_2__set__(struct __pyx_ob
   __Pyx_RefNannySetupContext("__set__", 0);
 
   /* "libpuzzle/bases.pyx":153
- * 
+ *
  *         def __set__(self, bint value):
  *             response = puzzle_set_autocrop(&self.context, value)             # <<<<<<<<<<<<<<
  *             if response:
@@ -2146,7 +2146,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_8autocrop_2__set__(struct __pyx_ob
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_response != 0);
   if (__pyx_t_1) {
@@ -2155,7 +2155,7 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_8autocrop_2__set__(struct __pyx_ob
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef fill_cvec_from_file(self, char* filename):
  */
     __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_AttributeError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2169,13 +2169,13 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_8autocrop_2__set__(struct __pyx_ob
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:             # <<<<<<<<<<<<<<
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  */
   }
 
   /* "libpuzzle/bases.pyx":152
  *             return <bint>self.context.puzzle_enable_autocrop
- * 
+ *
  *         def __set__(self, bint value):             # <<<<<<<<<<<<<<
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:
@@ -2195,10 +2195,10 @@ static int __pyx_pf_9libpuzzle_5bases_6Puzzle_8autocrop_2__set__(struct __pyx_ob
 
 /* "libpuzzle/bases.pyx":157
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  *     cpdef fill_cvec_from_file(self, char* filename):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCvec cvec
- * 
+ *
  */
 
 static PyObject *__pyx_pw_9libpuzzle_5bases_6Puzzle_5fill_cvec_from_file(PyObject *__pyx_v_self, PyObject *__pyx_arg_filename); /*proto*/
@@ -2267,7 +2267,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
 
   /* "libpuzzle/bases.pyx":160
  *         cdef PuzzleCvec cvec
- * 
+ *
  *         puzzle_init_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
  *             puzzle_free_cvec(&self.context, &cvec);
@@ -2275,7 +2275,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
   puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
   /* "libpuzzle/bases.pyx":161
- * 
+ *
  *         puzzle_init_cvec(&self.context, &cvec)
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):             # <<<<<<<<<<<<<<
  *             puzzle_free_cvec(&self.context, &cvec);
@@ -2289,7 +2289,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
  *             puzzle_free_cvec(&self.context, &cvec);             # <<<<<<<<<<<<<<
  *             raise PuzzleError('lalala')
- * 
+ *
  */
     puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
@@ -2297,7 +2297,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
  *             puzzle_free_cvec(&self.context, &cvec);
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
- * 
+ *
  *         cdef Py_ssize_t length = 0
  */
     __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2310,7 +2310,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
     /* "libpuzzle/bases.pyx":161
- * 
+ *
  *         puzzle_init_cvec(&self.context, &cvec)
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):             # <<<<<<<<<<<<<<
  *             puzzle_free_cvec(&self.context, &cvec);
@@ -2320,18 +2320,18 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
 
   /* "libpuzzle/bases.pyx":165
  *             raise PuzzleError('lalala')
- * 
+ *
  *         cdef Py_ssize_t length = 0             # <<<<<<<<<<<<<<
  *         length = cvec.sizeof_vec
- * 
+ *
  */
   __pyx_v_length = 0;
 
   /* "libpuzzle/bases.pyx":166
- * 
+ *
  *         cdef Py_ssize_t length = 0
  *         length = cvec.sizeof_vec             # <<<<<<<<<<<<<<
- * 
+ *
  *         response = cvec.vec[:length]
  */
   __pyx_t_8 = __pyx_v_cvec.sizeof_vec;
@@ -2339,7 +2339,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
 
   /* "libpuzzle/bases.pyx":168
  *         length = cvec.sizeof_vec
- * 
+ *
  *         response = cvec.vec[:length]             # <<<<<<<<<<<<<<
  *         puzzle_free_cvec(&self.context, &cvec);
  *         return response
@@ -2350,11 +2350,11 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
   __pyx_t_2 = 0;
 
   /* "libpuzzle/bases.pyx":169
- * 
+ *
  *         response = cvec.vec[:length]
  *         puzzle_free_cvec(&self.context, &cvec);             # <<<<<<<<<<<<<<
  *         return response
- * 
+ *
  */
   puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
@@ -2362,7 +2362,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
  *         response = cvec.vec[:length]
  *         puzzle_free_cvec(&self.context, &cvec);
  *         return response             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef compress_cvec(self, sign):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2372,10 +2372,10 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_fill_cvec_from_file(struct __
 
   /* "libpuzzle/bases.pyx":157
  *                 raise AttributeError('unable to set p_ratio')
- * 
+ *
  *     cpdef fill_cvec_from_file(self, char* filename):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCvec cvec
- * 
+ *
  */
 
   /* function exit code */
@@ -2449,7 +2449,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_4fill_cvec_from_file(struct 
 
 /* "libpuzzle/bases.pyx":172
  *         return response
- * 
+ *
  *     cpdef compress_cvec(self, sign):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCompressedCvec compressed_cvec
  *         cdef PuzzleCvec cvec
@@ -2520,37 +2520,37 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
 
   /* "libpuzzle/bases.pyx":176
  *         cdef PuzzleCvec cvec
- * 
+ *
  *         puzzle_init_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
  *         puzzle_init_cvec(&self.context, &cvec)
- * 
+ *
  */
   puzzle_init_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
   /* "libpuzzle/bases.pyx":177
- * 
+ *
  *         puzzle_init_compressed_cvec(&self.context, &compressed_cvec)
  *         puzzle_init_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
- * 
+ *
  *         cvec.vec = sign
  */
   puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
   /* "libpuzzle/bases.pyx":179
  *         puzzle_init_cvec(&self.context, &cvec)
- * 
+ *
  *         cvec.vec = sign             # <<<<<<<<<<<<<<
  *         cvec.sizeof_vec = <size_t>len(sign)
- * 
+ *
  */
   __pyx_t_6 = __Pyx_PyObject_AsSString(__pyx_v_sign); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_cvec.vec = __pyx_t_6;
 
   /* "libpuzzle/bases.pyx":180
- * 
+ *
  *         cvec.vec = sign
  *         cvec.sizeof_vec = <size_t>len(sign)             # <<<<<<<<<<<<<<
- * 
+ *
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):
  */
   __pyx_t_7 = PyObject_Length(__pyx_v_sign); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2558,7 +2558,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
 
   /* "libpuzzle/bases.pyx":182
  *         cvec.sizeof_vec = <size_t>len(sign)
- * 
+ *
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):             # <<<<<<<<<<<<<<
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             cvec.vec = NULL
@@ -2567,7 +2567,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
   if (__pyx_t_8) {
 
     /* "libpuzzle/bases.pyx":183
- * 
+ *
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
  *             cvec.vec = NULL
@@ -2589,7 +2589,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
  *             cvec.vec = NULL
  *             puzzle_free_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
  *             raise PuzzleError('lalala')
- * 
+ *
  */
     puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
@@ -2597,7 +2597,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
  *             cvec.vec = NULL
  *             puzzle_free_cvec(&self.context, &cvec)
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
- * 
+ *
  *         cdef Py_ssize_t length = 0
  */
     __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2611,7 +2611,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
 
     /* "libpuzzle/bases.pyx":182
  *         cvec.sizeof_vec = <size_t>len(sign)
- * 
+ *
  *         if puzzle_compress_cvec(&self.context, &compressed_cvec, &cvec):             # <<<<<<<<<<<<<<
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             cvec.vec = NULL
@@ -2620,18 +2620,18 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
 
   /* "libpuzzle/bases.pyx":188
  *             raise PuzzleError('lalala')
- * 
+ *
  *         cdef Py_ssize_t length = 0             # <<<<<<<<<<<<<<
  *         length = compressed_cvec.sizeof_compressed_vec
- * 
+ *
  */
   __pyx_v_length = 0;
 
   /* "libpuzzle/bases.pyx":189
- * 
+ *
  *         cdef Py_ssize_t length = 0
  *         length = compressed_cvec.sizeof_compressed_vec             # <<<<<<<<<<<<<<
- * 
+ *
  *         response =compressed_cvec.vec[:length]
  */
   __pyx_t_9 = __pyx_v_compressed_cvec.sizeof_compressed_vec;
@@ -2639,9 +2639,9 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
 
   /* "libpuzzle/bases.pyx":191
  *         length = compressed_cvec.sizeof_compressed_vec
- * 
+ *
  *         response =compressed_cvec.vec[:length]             # <<<<<<<<<<<<<<
- * 
+ *
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  */
   __pyx_t_2 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_compressed_cvec.vec) + 0, __pyx_v_length - 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2651,7 +2651,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
 
   /* "libpuzzle/bases.pyx":193
  *         response =compressed_cvec.vec[:length]
- * 
+ *
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
  *         cvec.vec = NULL
  *         puzzle_free_cvec(&self.context, &cvec)
@@ -2659,7 +2659,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
   puzzle_free_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
   /* "libpuzzle/bases.pyx":194
- * 
+ *
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *         cvec.vec = NULL             # <<<<<<<<<<<<<<
  *         puzzle_free_cvec(&self.context, &cvec)
@@ -2672,7 +2672,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
  *         cvec.vec = NULL
  *         puzzle_free_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
  *         return response
- * 
+ *
  */
   puzzle_free_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
@@ -2680,7 +2680,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
  *         cvec.vec = NULL
  *         puzzle_free_cvec(&self.context, &cvec)
  *         return response             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef uncompress_cvec(self, sign):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2690,7 +2690,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_compress_cvec(struct __pyx_ob
 
   /* "libpuzzle/bases.pyx":172
  *         return response
- * 
+ *
  *     cpdef compress_cvec(self, sign):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCompressedCvec compressed_cvec
  *         cdef PuzzleCvec cvec
@@ -2753,7 +2753,7 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_6compress_cvec(struct __pyx_
 
 /* "libpuzzle/bases.pyx":198
  *         return response
- * 
+ *
  *     cpdef uncompress_cvec(self, sign):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCompressedCvec compressed_cvec
  *         cdef PuzzleCvec cvec
@@ -2824,37 +2824,37 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
 
   /* "libpuzzle/bases.pyx":202
  *         cdef PuzzleCvec cvec
- * 
+ *
  *         puzzle_init_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
  *         puzzle_init_cvec(&self.context, &cvec)
- * 
+ *
  */
   puzzle_init_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
   /* "libpuzzle/bases.pyx":203
- * 
+ *
  *         puzzle_init_compressed_cvec(&self.context, &compressed_cvec)
  *         puzzle_init_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
- * 
+ *
  *         compressed_cvec.vec = sign
  */
   puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec));
 
   /* "libpuzzle/bases.pyx":205
  *         puzzle_init_cvec(&self.context, &cvec)
- * 
+ *
  *         compressed_cvec.vec = sign             # <<<<<<<<<<<<<<
  *         compressed_cvec.sizeof_compressed_vec = <size_t>len(sign)
- * 
+ *
  */
   __pyx_t_6 = __Pyx_PyObject_AsUString(__pyx_v_sign); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_compressed_cvec.vec = __pyx_t_6;
 
   /* "libpuzzle/bases.pyx":206
- * 
+ *
  *         compressed_cvec.vec = sign
  *         compressed_cvec.sizeof_compressed_vec = <size_t>len(sign)             # <<<<<<<<<<<<<<
- * 
+ *
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):
  */
   __pyx_t_7 = PyObject_Length(__pyx_v_sign); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 206; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2862,7 +2862,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
 
   /* "libpuzzle/bases.pyx":208
  *         compressed_cvec.sizeof_compressed_vec = <size_t>len(sign)
- * 
+ *
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):             # <<<<<<<<<<<<<<
  *             puzzle_free_cvec(&self.context, &cvec)
  *             compressed_cvec.vec = NULL
@@ -2871,7 +2871,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
   if (__pyx_t_8) {
 
     /* "libpuzzle/bases.pyx":209
- * 
+ *
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):
  *             puzzle_free_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
  *             compressed_cvec.vec = NULL
@@ -2893,7 +2893,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
  *             compressed_cvec.vec = NULL
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
  *             raise PuzzleError('lalala')
- * 
+ *
  */
     puzzle_free_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
@@ -2901,7 +2901,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
  *             compressed_cvec.vec = NULL
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
- * 
+ *
  *         cdef Py_ssize_t length = 0
  */
     __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PuzzleError); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2915,7 +2915,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
 
     /* "libpuzzle/bases.pyx":208
  *         compressed_cvec.sizeof_compressed_vec = <size_t>len(sign)
- * 
+ *
  *         if puzzle_uncompress_cvec(&self.context, &compressed_cvec, &cvec):             # <<<<<<<<<<<<<<
  *             puzzle_free_cvec(&self.context, &cvec)
  *             compressed_cvec.vec = NULL
@@ -2924,18 +2924,18 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
 
   /* "libpuzzle/bases.pyx":214
  *             raise PuzzleError('lalala')
- * 
+ *
  *         cdef Py_ssize_t length = 0             # <<<<<<<<<<<<<<
  *         length = cvec.sizeof_vec
- * 
+ *
  */
   __pyx_v_length = 0;
 
   /* "libpuzzle/bases.pyx":215
- * 
+ *
  *         cdef Py_ssize_t length = 0
  *         length = cvec.sizeof_vec             # <<<<<<<<<<<<<<
- * 
+ *
  *         response = cvec.vec[:length]
  */
   __pyx_t_9 = __pyx_v_cvec.sizeof_vec;
@@ -2943,7 +2943,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
 
   /* "libpuzzle/bases.pyx":217
  *         length = cvec.sizeof_vec
- * 
+ *
  *         response = cvec.vec[:length]             # <<<<<<<<<<<<<<
  *         puzzle_free_cvec(&self.context, &cvec)
  *         compressed_cvec.vec = NULL
@@ -2954,7 +2954,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
   __pyx_t_2 = 0;
 
   /* "libpuzzle/bases.pyx":218
- * 
+ *
  *         response = cvec.vec[:length]
  *         puzzle_free_cvec(&self.context, &cvec)             # <<<<<<<<<<<<<<
  *         compressed_cvec.vec = NULL
@@ -2976,7 +2976,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
  *         compressed_cvec.vec = NULL
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)             # <<<<<<<<<<<<<<
  *         return response
- * 
+ *
  */
   puzzle_free_compressed_cvec((&__pyx_v_self->context), (&__pyx_v_compressed_cvec));
 
@@ -2984,7 +2984,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
  *         compressed_cvec.vec = NULL
  *         puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *         return response             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef vector_normalized_distance(self, sign1, sign2):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2994,7 +2994,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_uncompress_cvec(struct __pyx_
 
   /* "libpuzzle/bases.pyx":198
  *         return response
- * 
+ *
  *     cpdef uncompress_cvec(self, sign):             # <<<<<<<<<<<<<<
  *         cdef PuzzleCompressedCvec compressed_cvec
  *         cdef PuzzleCvec cvec
@@ -3057,10 +3057,10 @@ static PyObject *__pyx_pf_9libpuzzle_5bases_6Puzzle_8uncompress_cvec(struct __py
 
 /* "libpuzzle/bases.pyx":223
  *         return response
- * 
+ *
  *     cpdef vector_normalized_distance(self, sign1, sign2):             # <<<<<<<<<<<<<<
  *         """Computes the distance between two vectors.
- * 
+ *
  */
 
 static PyObject *__pyx_pw_9libpuzzle_5bases_6Puzzle_11vector_normalized_distance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
@@ -3127,37 +3127,37 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_vector_normalized_distance(st
 
   /* "libpuzzle/bases.pyx":231
  *         cdef double distance
- * 
+ *
  *         puzzle_init_cvec(&self.context, &cvec1)             # <<<<<<<<<<<<<<
  *         puzzle_init_cvec(&self.context, &cvec2)
- * 
+ *
  */
   puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec1));
 
   /* "libpuzzle/bases.pyx":232
- * 
+ *
  *         puzzle_init_cvec(&self.context, &cvec1)
  *         puzzle_init_cvec(&self.context, &cvec2)             # <<<<<<<<<<<<<<
- * 
+ *
  *         cvec1.vec = sign1
  */
   puzzle_init_cvec((&__pyx_v_self->context), (&__pyx_v_cvec2));
 
   /* "libpuzzle/bases.pyx":234
  *         puzzle_init_cvec(&self.context, &cvec2)
- * 
+ *
  *         cvec1.vec = sign1             # <<<<<<<<<<<<<<
  *         cvec1.sizeof_vec = <size_t>len(sign1)
- * 
+ *
  */
   __pyx_t_7 = __Pyx_PyObject_AsSString(__pyx_v_sign1); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_cvec1.vec = __pyx_t_7;
 
   /* "libpuzzle/bases.pyx":235
- * 
+ *
  *         cvec1.vec = sign1
  *         cvec1.sizeof_vec = <size_t>len(sign1)             # <<<<<<<<<<<<<<
- * 
+ *
  *         cvec2.vec = sign2
  */
   __pyx_t_5 = PyObject_Length(__pyx_v_sign1); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3165,19 +3165,19 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_vector_normalized_distance(st
 
   /* "libpuzzle/bases.pyx":237
  *         cvec1.sizeof_vec = <size_t>len(sign1)
- * 
+ *
  *         cvec2.vec = sign2             # <<<<<<<<<<<<<<
  *         cvec2.sizeof_vec = <size_t>len(sign2)
- * 
+ *
  */
   __pyx_t_7 = __Pyx_PyObject_AsSString(__pyx_v_sign2); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_cvec2.vec = __pyx_t_7;
 
   /* "libpuzzle/bases.pyx":238
- * 
+ *
  *         cvec2.vec = sign2
  *         cvec2.sizeof_vec = <size_t>len(sign2)             # <<<<<<<<<<<<<<
- * 
+ *
  *         distance = puzzle_vector_normalized_distance(&self.context,
  */
   __pyx_t_5 = PyObject_Length(__pyx_v_sign2); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3185,7 +3185,7 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_vector_normalized_distance(st
 
   /* "libpuzzle/bases.pyx":240
  *         cvec2.sizeof_vec = <size_t>len(sign2)
- * 
+ *
  *         distance = puzzle_vector_normalized_distance(&self.context,             # <<<<<<<<<<<<<<
  *                                                      &cvec1,
  *                                                      &cvec2,
@@ -3241,10 +3241,10 @@ static PyObject *__pyx_f_9libpuzzle_5bases_6Puzzle_vector_normalized_distance(st
 
   /* "libpuzzle/bases.pyx":223
  *         return response
- * 
+ *
  *     cpdef vector_normalized_distance(self, sign1, sign2):             # <<<<<<<<<<<<<<
  *         """Computes the distance between two vectors.
- * 
+ *
  */
 
   /* function exit code */
@@ -3644,7 +3644,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             response = puzzle_set_max_width(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set max width')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property max_height:
  */
   __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_max_width); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3655,7 +3655,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             response = puzzle_set_max_height(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set max height')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property lambdas:
  */
   __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_max_height); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3666,7 +3666,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             response = puzzle_set_lambdas(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set lambdas')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property noise_cutoff:
  */
   __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_lambdas); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3677,7 +3677,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             response = puzzle_set_noise_cutoff(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set noise cutoff')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property p_ratio:
  */
   __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_noise_cutoff); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3688,7 +3688,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             response = puzzle_set_p_ratio(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property contrast_barrier_for_cropping:
  */
   __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3699,7 +3699,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             response = puzzle_set_contrast_barrier_for_cropping(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property max_cropping_ratio:
  */
   __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3710,7 +3710,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             response = puzzle_set_max_cropping_ratio(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
- * 
+ *
  *     property autocrop:
  */
   __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3721,7 +3721,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             response = puzzle_set_autocrop(&self.context, value)
  *             if response:
  *                 raise AttributeError('unable to set p_ratio')             # <<<<<<<<<<<<<<
- * 
+ *
  *     cpdef fill_cvec_from_file(self, char* filename):
  */
   __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_s_unable_to_set_p_ratio); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3732,7 +3732,7 @@ static int __Pyx_InitCachedConstants(void) {
  *         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
  *             puzzle_free_cvec(&self.context, &cvec);
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
- * 
+ *
  *         cdef Py_ssize_t length = 0
  */
   __pyx_tuple__9 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3743,7 +3743,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             cvec.vec = NULL
  *             puzzle_free_cvec(&self.context, &cvec)
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
- * 
+ *
  *         cdef Py_ssize_t length = 0
  */
   __pyx_tuple__10 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3754,7 +3754,7 @@ static int __Pyx_InitCachedConstants(void) {
  *             compressed_cvec.vec = NULL
  *             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
  *             raise PuzzleError('lalala')             # <<<<<<<<<<<<<<
- * 
+ *
  *         cdef Py_ssize_t length = 0
  */
   __pyx_tuple__11 = PyTuple_Pack(1, __pyx_n_s_lalala); if (unlikely(!__pyx_tuple__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3883,7 +3883,7 @@ PyMODINIT_FUNC PyInit_bases(void)
 
   /* "libpuzzle/bases.pyx":57
  *     double puzzle_vector_normalized_distance(PuzzleContext * const context, const PuzzleCvec * const cvec1, const PuzzleCvec * const cvec2, const int fix_for_texts)
- * 
+ *
  * SIMILARITY_THRESHOLD = PUZZLE_CVEC_SIMILARITY_THRESHOLD             # <<<<<<<<<<<<<<
  * SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD
  * SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD
@@ -3894,7 +3894,7 @@ PyMODINIT_FUNC PyInit_bases(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "libpuzzle/bases.pyx":58
- * 
+ *
  * SIMILARITY_THRESHOLD = PUZZLE_CVEC_SIMILARITY_THRESHOLD
  * SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD             # <<<<<<<<<<<<<<
  * SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD
@@ -3910,7 +3910,7 @@ PyMODINIT_FUNC PyInit_bases(void)
  * SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD
  * SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD             # <<<<<<<<<<<<<<
  * SIMILARITY_LOWER_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOWER_THRESHOLD
- * 
+ *
  */
   __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -3921,8 +3921,8 @@ PyMODINIT_FUNC PyInit_bases(void)
  * SIMILARITY_HIGH_THRESHOLD = PUZZLE_CVEC_SIMILARITY_HIGH_THRESHOLD
  * SIMILARITY_LOW_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOW_THRESHOLD
  * SIMILARITY_LOWER_THRESHOLD = PUZZLE_CVEC_SIMILARITY_LOWER_THRESHOLD             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __pyx_t_1 = PyFloat_FromDouble(PUZZLE_CVEC_SIMILARITY_LOWER_THRESHOLD); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -3930,11 +3930,11 @@ PyMODINIT_FUNC PyInit_bases(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "libpuzzle/bases.pyx":63
- * 
- * 
+ *
+ *
  * class PuzzleError(RuntimeError):             # <<<<<<<<<<<<<<
  *     pass
- * 
+ *
  */
   __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
@@ -3956,7 +3956,7 @@ PyMODINIT_FUNC PyInit_bases(void)
   /* "libpuzzle/bases.pyx":1
  * # distutils: libraries = puzzle gd             # <<<<<<<<<<<<<<
  * # distutils: include_dirs = /usr/include
- * 
+ *
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);

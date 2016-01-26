@@ -8,4 +8,3 @@ RUN python -m pip install cython
 ADD . /app/
 WORKDIR /app
 RUN python -m pip install -r requirements-test.txt
-ENV ERRORIST_DEVELOPMENT_MODE libpuzzle
