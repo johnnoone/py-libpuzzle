@@ -15,7 +15,7 @@ install:
 	python -m pip install -e .
 
 test: compile install
-	py.test tests/ -vv
+	py.test tests/ --cov libpuzzle --cov-report term-missing
 
 publish:
 	# python setup.py build_ext --inplace

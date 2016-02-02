@@ -1,3 +1,5 @@
+## cython: linetrace=True
+## distutils: define_macros=CYTHON_TRACE=1
 # distutils: libraries = puzzle gd
 # distutils: include_dirs = /usr/include
 
@@ -160,7 +162,7 @@ cdef class Puzzle:
         puzzle_init_cvec(&self.context, &cvec)
         if puzzle_fill_cvec_from_file(&self.context, &cvec, filename):
             puzzle_free_cvec(&self.context, &cvec);
-            raise PuzzleError('lalala')
+            raise PuzzleError('Unable to fill cvec from file')
 
         cdef Py_ssize_t length = 0
         length = cvec.sizeof_vec
@@ -183,7 +185,7 @@ cdef class Puzzle:
             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
             cvec.vec = NULL
             puzzle_free_cvec(&self.context, &cvec)
-            raise PuzzleError('lalala')
+            raise PuzzleError('Unable to compress cvec')
 
         cdef Py_ssize_t length = 0
         length = compressed_cvec.sizeof_compressed_vec
@@ -209,7 +211,7 @@ cdef class Puzzle:
             puzzle_free_cvec(&self.context, &cvec)
             compressed_cvec.vec = NULL
             puzzle_free_compressed_cvec(&self.context, &compressed_cvec)
-            raise PuzzleError('lalala')
+            raise PuzzleError('Unable to uncompress cvec')
 
         cdef Py_ssize_t length = 0
         length = cvec.sizeof_vec

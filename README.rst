@@ -18,9 +18,10 @@ Sample applications:
 
 The library relies on the GD Library in order to load bitmap pictures.
 
-Installation:
+On a debian server, installation would be::
 
-    pip install libpuzzle
+    $ apt -y install libpuzzle-dev libgd2-xpm-dev
+    $ pip install libpuzzle
 
 
 Usage::
@@ -34,45 +35,53 @@ Usage::
     if distance <= SIMILARITY_THRESHOLD:
         print('images are propably the same')
 
-API:
 
-.. py:data:: SIMILARITY_THRESHOLD
-.. py:data:: SIMILARITY_HIGH_THRESHOLD
-.. py:data:: SIMILARITY_LOW_THRESHOLD
-.. py:data:: SIMILARITY_LOWER_THRESHOLD
+API::
 
-.. py:class:: Puzzle
+    SIMILARITY_THRESHOLD
+    SIMILARITY_HIGH_THRESHOLD
+    SIMILARITY_LOW_THRESHOLD
+    SIMILARITY_LOWER_THRESHOLD
 
-    .. py:attribute:: max_width
+    class Puzzle:
 
-    .. py:attribute:: max_height
+        max_width  #
 
-    .. py:attribute:: lambdas
+        max_height  #
 
-    .. py:attribute:: noise_cutoff
+        lambdas  #
 
-    .. py:attribute:: p_ratio
+        noise_cutoff  #
 
-    .. py:attribute:: contrast_barrier_for_cropping
+        p_ratio  #
 
-    .. py:attribute:: max_cropping_ratio
+        contrast_barrier_for_cropping  #
 
-    .. py:attribute:: autocrop
+        max_cropping_ratio  #
 
-    .. py:method:: from_filename(filename) -> Signature
+        autocrop  #
 
-    .. py:method:: from_signature(sign) -> CompressedSignature
+        from_filename(filename) -> Signature
+            # hydrate Signature from filename
 
-    .. py:method:: from_signature(sign) -> Signature
+        from_signature(sign) -> Signature
+            # hydrate Signature from value
 
-    .. py:method:: vector_normalized_distance(sign1, sign2) -> bool
+        from_compressed_signature(sign) -> Signature
+            # hydrate Signature from compressed value
 
-.. py:class:: Signature
 
-.. py:class:: CompressedSignature
+    class Signature:
+        # Implements signature
 
-.. py:exception:: PuzzleError
+        value  # the value
+        compressed  # the compressed value
 
-    Raise when something went wrong
+        distance(signature) -> float
+            # distance between 2 signatures
+
+
+    exception PuzzleError:
+        # Raise when something went wrong
 
 .. _libpuzzle: https://www.pureftpd.org/project/libpuzzle

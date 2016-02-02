@@ -36,7 +36,8 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    url='https://lab.errorist.xyz/aio/pyrepo',
+    keywords=['image'],
+    url='https://lab.errorist.xyz/py/libpuzzle',
     license='MIT',
     cmdclass=versioneer.get_cmdclass(),
 )
